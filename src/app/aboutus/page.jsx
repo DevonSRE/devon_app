@@ -10,7 +10,7 @@ import ContactUs from "../home/contact/page";
 
 const AboutUs = () => {
   return (
-    <div className="text-[#070707] dark:bg-black dark:text-white">
+    <div className="text-[#070707]">
       <div className="bg-black md:py-10 text-white">
         <div className="flex justify-between md:px-28 px-4">
             <div className="flex flex-row items-center">
