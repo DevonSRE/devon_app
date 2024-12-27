@@ -3,17 +3,28 @@
 @tailwind utilities;
 
 
-/* Default (Light Mode) */
-body {
-  background-color: white;
-  color: #070707;
+/* Variables for consistent color management */
+:root {
+  --bg-color: white;
+  --text-color: #070707;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #070707;
-    color: white;
-  }
+[data-theme='dark'] {
+  --bg-color: #070707;
+  --text-color: white;
 }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
 
