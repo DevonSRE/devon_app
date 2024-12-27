@@ -2,21 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+/* Default (Light Mode) */
+body {
+  background-color: white;
+  color: #070707;
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    color: #ededed;
+  body {
+    background-color: #070707;
+    color: white;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Lexend;
-}
