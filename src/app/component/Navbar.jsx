@@ -18,7 +18,7 @@ export default function Navbar() {
           <div>
             <Image src={devonLogo} alt="A logo of Devon" />
           </div>
-          <div className="bg-[#B8B8B826] hidden md:flex gap-8 text-sm px-14 py-2 rounded-3xl">
+          <div className="bg-[#B8B8B826] hidden md:flex gap-8 text-sm px-14 py-3 rounded-3xl">
             <Link href="/" className={`${pathname === "/" ? "text-green-500" : "text-white"}`}>Home</Link>
             <Link href="/aboutus" className={`${pathname === "/aboutus" ? "text-green-500" : "text-white"}`}>About Us</Link>
             <Link href="/services"className={`${pathname === "/services" ? "text-green-500" : "text-white"}`}>Services</Link>
@@ -29,7 +29,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <div
               onClick={handleClick}
-              className="md:hidden relative right-8 cursor-pointer z-50"
+              className="md:hidden relative cursor-pointer z-50"
             >
               {!nav ? (
                 <svg

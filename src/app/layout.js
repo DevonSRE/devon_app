@@ -2,6 +2,7 @@ import { Geist, Lexend } from "next/font/google";
 import "./globals.css";
 import Navbar from "./component/Navbar";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

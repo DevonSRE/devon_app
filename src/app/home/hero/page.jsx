@@ -21,7 +21,7 @@ const Hero = () => {
       {/* Content Container */}
       <div className="flex justify-center z-10 h-screen">
         <div className="flex justify-center items-center md:w-[1000px]">
-          <div className="md:p-20 p-4">
+          <div className="md:p-20 px-4">
             <h1 className="font-lexend font-semibold md:text-[40px] md:pt-20 text-[28px]">
               Empowering Change Through
               Innovative Solutions
