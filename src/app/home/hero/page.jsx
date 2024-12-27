@@ -22,11 +22,11 @@ const Hero = () => {
       <div className="flex justify-center z-10 h-screen">
         <div className="flex justify-center items-center md:w-[1000px]">
           <div className="md:p-20 p-4">
-            <h1 className="font-lexend font-semibold text-[40px] md:pt-20 ">
+            <h1 className="font-lexend font-semibold md:text-[40px] md:pt-20 text-[28px]">
               Empowering Change Through
-              <br /> Innovative Solutions
+              Innovative Solutions
             </h1>
-            <p className="font-lexend font-light text-sm mt-10">
+            <p className="font-lexend font-light text-sm md:mt-10 mt-4">
               At Devon Technology, we strive to lead the way in developing
               software
               <br />

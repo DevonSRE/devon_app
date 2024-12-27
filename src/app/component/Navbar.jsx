@@ -84,7 +84,7 @@ export default function Navbar() {
     );
   } else {
     return (
-      <nav className="flex justify-between py-4 bg-[#E6E7E6] text-[#070707] px-10">
+      <nav className="flex justify-between py-4 bg-[#E6E7E6] text-[#070707] px-4">
         <div className="md:ml-36">
           <Image
             src={devonLogo}
