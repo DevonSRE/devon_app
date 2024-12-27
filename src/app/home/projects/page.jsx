@@ -6,7 +6,7 @@ import Image from "next/image";
 const Projects = () => {
   return (
     <div className="flex justify-center">
-      <div className="text-left mt-20 text-[#070707] px-4">
+      <div className="text-left mt-20 text-[#070707] px-4 max-w-[1000px]">
         <div className="bg-[#EC1C241A] inline-block rounded p-1 px-2 mt-20 mb-4">
           <p className="text-[#EC1C24] text-sm font-light">
             Completed Projects
@@ -18,21 +18,16 @@ const Projects = () => {
         </h1>
 
         <div className="mt-10 text-left">
-          <div className="md:flex gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="border-2 border-[#E6E7E6] p-4 rounded-md mb-4">
               <div className="border-2 border-[#EFEEF6] p-6 justify-center bg-[#EFEEF6] flex mb-2">
                 <Image src={medicareImg} alt="An image of medicare logo" />
               </div>
               <h2 className="font-lexend font-semibold text-[20px] mb-4">
-                Rural Healthcare Access: <br />
-                Med-icare
+                Rural Healthcare Access: Med-icare
               </h2>
               <p className="font-light text-[14px]">
-                We developed a telemedicine platform <br />
-                connecting patients in rural communities
-                <br />
-                with urban specialists, improving access <br />
-                to diagnosis and treatment.
+                We developed a telemedicine platform connecting patients in rural communities with urban specialists, improving access to diagnosis and treatment.
               </p>
             </div>
 
@@ -45,17 +40,10 @@ const Projects = () => {
                 />
               </div>
               <h2 className="font-lexend font-semibold text-[20px] mb-4">
-                An Interactive Learning
-                <br />
-                Platform
+                An Interactive Learning Platform
               </h2>
               <p className="font-light text-[14px]">
-                We developed an interactive and <br />
-                engaging online learning platform with
-                <br />
-                personalized learning paths and access to <br />
-                educational resources for underprivileged <br />
-                students.
+                We developed an interactive and engaging online learning platform with personalized learning paths and access to educational resources for underprivileged students.
               </p>
             </div>
 
@@ -64,15 +52,10 @@ const Projects = () => {
                 <Image src={medicareImg} alt="An image of medicare logo" />
               </div>
               <h2 className="font-lexend font-semibold text-[20px] mb-4">
-                Rural Healthcare Access: <br />
-                Med-icare
+                Rural Healthcare Access: Med-icare
               </h2>
               <p className="font-light text-[14px]">
-                We developed a telemedicine platform <br />
-                connecting patients in rural communities
-                <br />
-                with urban specialists, improving access <br />
-                to diagnosis and treatment.
+                We developed a telemedicine platform connecting patients in rural communities with urban specialists, improving access to diagnosis and treatment.
               </p>
             </div>
           </div>

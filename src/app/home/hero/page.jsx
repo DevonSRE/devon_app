@@ -1,7 +1,6 @@
 import React from "react";
-import heroOverlay from "../../../../public/hero_overlay.svg";
+// import heroOverlay from "../../../../public/hero_overlay.svg";
 import heroImg from "../../../../public/hero.png";
-import devonLogo from "../../../../public/devon_logo.png";
 import Image from "next/image";
 
 const Hero = () => {

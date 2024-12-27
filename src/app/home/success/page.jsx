@@ -7,10 +7,8 @@ const Success = () => {
     <div className="text-[#070707] text-left mt-20 px-4 flex justify-center">
       <div className="md:flex gap-10">
         
-        <h2 className="font-lexend font-semibold text-[28px] mb-6">
-          Transforming Communities: Our<br />
-          Impact Through Innovative<br />
-          Software Solutions
+        <h2 className="font-lexend font-semibold text-[28px] mb-6 max-w-[500px]">
+          Transforming Communities: Our Impact Through Innovative Software Solutions
         </h2>
         
 

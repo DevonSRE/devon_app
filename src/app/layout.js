@@ -1,8 +1,5 @@
 import { Geist, Lexend } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import Image from "next/image";
-import devonLogo from "../../public/devon_logo.png";
 import Navbar from "./component/Navbar";
 
 const geistSans = Geist({
