@@ -1,6 +1,6 @@
 import React from "react";
 import devonLogo from "../../../public/devon_logo.png";
-import aboutThree from "../../../public/about_three.png";
+import aboutFour from "../../../public/about_four.png";
 import teamImg from "../../../public/team.png";
 import Image from "next/image";
 import Footer from "../footer/page";
@@ -26,8 +26,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="mt-4">
-        <div className="px-4">
+      <div className="mt-4 flex justify-center">
+        <div className="px-4 max-w-[1000px]">
 
             <div className="md:flex flex-cols gap-8 mb-6 justify-center items-center">
                 <div className="pt-8 ">
@@ -42,11 +42,11 @@ const AboutUs = () => {
                             Leading the Future of Impactful Software
                         </h1>
                         <p className="font-light text-sm">
-                            At Devon Technology Limited, we are not just a software company; we are your<br />
-                            partners in creating meaningful change. Our vision is to lead the charge in <br />
-                            developing innovative software solutions that empower organizations to tackle <br />
-                            pressing social issues, foster collaboration, and generate lasting positive impacts <br/>
-                            across various industries. We believe that technology can bridge gaps, enhance <br/>
+                            At Devon Technology Limited, we are not just a software company; we are your
+                            partners in creating meaningful change. Our vision is to lead the charge in 
+                            developing innovative software solutions that empower organizations to tackle 
+                            pressing social issues, foster collaboration, and generate lasting positive impacts
+                            across various industries. We believe that technology can bridge gaps, enhance
                             connectivity, and promote social responsibility — one solution at a time.
                         </p>
                     </div>
@@ -61,10 +61,10 @@ const AboutUs = () => {
                             Our Commitment to You
                         </h1>
                         <p className="font-light text-sm">
-                            We exist to support organizations by providing advanced software solutions tailored<br />
-                            specifically to your unique needs. Our mission is clear: to drive social change and<br />
-                            empower growth through scalable, multi-tenant syaytems. We understand the <br />
-                            finacial challenges many organizations face, which is why we are dedicated to <br/>
+                            We exist to support organizations by providing advanced software solutions tailored
+                            specifically to your unique needs. Our mission is clear: to drive social change and
+                            empower growth through scalable, multi-tenant syaytems. We understand the 
+                            finacial challenges many organizations face, which is why we are dedicated to 
                             ensuring that everyone has access to the tools they need.
                         </p>
                     </div>
@@ -72,15 +72,15 @@ const AboutUs = () => {
                 </div>
                 
                 <Image
-                src={aboutThree}
+                src={aboutFour}
                 alt="An image of people collaborating"
-                height={400}
+                height={500}
                 />
             </div>
             
 
             {/* Who We Serve */}
-            <div>
+            <div className="max-w-[1000px]">
                 <div className="text-center mt-10 md:mt-20">
                     <div className="bg-[#EC1C241A] inline-block rounded p-1 px-2 mb-4">
                         <p className="text-[#EC1C24] text-sm font-light">Who We Serve</p>
@@ -88,13 +88,13 @@ const AboutUs = () => {
                     <h1 className="font-lexend font-semibold text-[24px] mb-8">
                         Ideal Partners for Social Change
                     </h1>
-                    <p className="font-light text-sm">
-                        We thrive with organizations who are eageer to drive social change through<br />
+                    <p className="font-light text-sm mx-auto max-w-[500px]">
+                        We thrive with organizations who are eageer to drive social change through
                         innovative software solutions.
                     </p>
                 </div>
 
-                <div className="md:px-40 mt-10">
+                <div className="mt-10">
                     <div className="grid grid-cols md:grid-cols-3 gap-6">
                         <div className="bg-white border-2 border-[#E6E7E6] p-6 rounded-md">                            
                             <p className="text-sm">Social enterprises dedicated to innovation and corporate social responsibility.</p>
@@ -119,16 +119,16 @@ const AboutUs = () => {
             </div>
 
             {/* Our Team */}
-            <div>
-                <div className="text-center mt-10 md:mt-20">
+            <div className="md:mt-20 mt-10 ">
+                <div className="text-center">
                     <div className="bg-[#EC1C241A] inline-block rounded p-1 px-2 mb-4">
                         <p className="text-[#EC1C24] text-sm font-light">Our Team</p>
                     </div>
                     <h1 className="font-lexend font-semibold text-[24px] mb-6">
                         Meet the Devon Technology Team
                     </h1>
-                    <p className="font-light text-sm">
-                        Our team is composed of dedecated professionals who are passionate<br/>
+                    <p className="font-light text-sm mx-auto max-w-[500px]">
+                        Our team is composed of dedecated professionals who are passionate
                         about leveraging technology to create impactful solutions.
                     </p>
                 </div>
