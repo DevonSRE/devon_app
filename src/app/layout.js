@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${geistSans.variable} antialiased dark:text-white`}>
+      <body className={`${lexend.variable} ${geistSans.variable} antialiased`}>
         <header>
           <Navbar/>
         </header>
