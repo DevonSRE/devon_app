@@ -1,23 +1,10 @@
 import React from "react";
-// import heroOverlay from "../../../../public/hero_overlay.svg";
 import heroImg from "../../../../public/hero.png";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="bg-black text-white">
-      {/* Image Overlay */}
-      {/* <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${heroOverlay})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      ></div> */}
-
-
+    <div className="bg-[url('/overlay.png')] bg-cover bg-center bg-no-repeat text-white">
       {/* Content Container */}
       <div className="md:relative md:block flex justify-center h-screen md:h-fit">
         <div className="md:absolute md:z-10 md:block flex items-center">
