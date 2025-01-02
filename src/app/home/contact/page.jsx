@@ -2,6 +2,7 @@
 import Image from "next/image";
 import contactImg from "../../../../public/contact_img.png";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const initialValues = {
   firstname: "",
@@ -77,15 +78,18 @@ const ContactUs = () => {
           Accept: "application/json"
         }
       })
-      if (response.ok){
-        alert("Message sent successfully!");
+      if (response.ok) {
+        // alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         setValues(initialValues); // Reset form
         setTouched({});
       } else {
-        alert("An error occured. Please try again.");
+        // alert("An error occured. Please try again.");
+        toast.error("An error occured. Please try again.");
       }
     } catch (error) {
-      alert("An error occured. Please try again.");
+      // alert("An error occured. Please try again.");
+      toast.error("An error occured. Please try again.");
       console.log(error)
     } finally {
       setIsLoading(false);
@@ -129,9 +133,8 @@ const ContactUs = () => {
                     value={values.firstname}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className={`w-full px-4 py-2 border rounded-md ${
-                      errors.firstname ? "border-red-500" : "border-[#E6E7E6]"
-                    } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+                    className={`w-full px-4 py-2 border rounded-md ${errors.firstname ? "border-red-500" : "border-[#E6E7E6]"
+                      } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
                   />
                   <input
                     type="text"
@@ -140,9 +143,8 @@ const ContactUs = () => {
                     value={values.lastname}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className={`w-full px-4 py-2 border rounded-md ${
-                      errors.lastname ? "border-red-500" : "border-[#E6E7E6]"
-                    } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+                    className={`w-full px-4 py-2 border rounded-md ${errors.lastname ? "border-red-500" : "border-[#E6E7E6]"
+                      } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
                   />
                 </div>
                 {errors.firstname && (
@@ -165,9 +167,8 @@ const ContactUs = () => {
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-2 border rounded-md ${
-                    errors.email ? "border-red-500" : "border-[#E6E7E6]"
-                  } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+                  className={`w-full px-4 py-2 border rounded-md ${errors.email ? "border-red-500" : "border-[#E6E7E6]"
+                    } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
                 />
                 {errors.email && (
                   <p className="text-red-500 text-xs mt-1">{errors.email}</p>
@@ -186,9 +187,8 @@ const ContactUs = () => {
                   value={values.phone}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-2 border rounded-md ${
-                    errors.phone ? "border-red-500" : "border-[#E6E7E6]"
-                  } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+                  className={`w-full px-4 py-2 border rounded-md ${errors.phone ? "border-red-500" : "border-[#E6E7E6]"
+                    } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
@@ -207,9 +207,8 @@ const ContactUs = () => {
                   value={values.message}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-2 border rounded-md ${
-                    errors.message ? "border-red-500" : "border-[#E6E7E6]"
-                  } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
+                  className={`w-full px-4 py-2 border rounded-md ${errors.message ? "border-red-500" : "border-[#E6E7E6]"
+                    } text-sm placeholder:text-xs focus:outline-none focus:ring-1 focus:ring-blue-400 `}
                 />
                 {errors.message && (
                   <p className="text-red-500 text-xs mt-1">{errors.message}</p>
@@ -221,16 +220,15 @@ const ContactUs = () => {
                 type="submit"
                 disabled={
                   isLoading ||
-                  Object.values(errors).some((error) => error) || 
+                  Object.values(errors).some((error) => error) ||
                   Object.values(values).some((value) => !value.trim())
                 }
-                className={`bg-[#37B34A] mt-8 px-12 py-3 rounded-lg text-white cursor-pointer ${
-                  isLoading ||
+                className={`bg-[#37B34A] mt-8 px-12 py-3 rounded-lg text-white cursor-pointer ${isLoading ||
                   Object.values(errors).some((error) => error) ||
-                  Object.values(values).some((value) => !value.trim()) 
-                    ? "opacity-50 cursor-not-allowed"
-                    : ""
-                }`}
+                  Object.values(values).some((value) => !value.trim())
+                  ? "opacity-50 cursor-not-allowed"
+                  : ""
+                  }`}
               >
                 {isLoading ? "Sending..." : "Send Message"}
               </button>
