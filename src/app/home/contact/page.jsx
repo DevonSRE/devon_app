@@ -62,6 +62,7 @@ const ContactUs = () => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
+    console.log(values);
 
     if (Object.keys(validationErrors).length > 0) return;
 

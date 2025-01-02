@@ -24,7 +24,7 @@ export default async function handler(req, res) {
             },
             To: [
               {
-                Email: 'nkechinyere.nzeamalu.247504@unn.edu.ng', // Replace with recipient's email
+                Email: 'info@devontech.io', // Replace with recipient's email
                 Name: 'Devon Technologies', // Replace with recipient's name
               },
             ],
