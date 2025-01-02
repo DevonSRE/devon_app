@@ -2,8 +2,8 @@
 import mailjet from 'node-mailjet';
 
 const mailjetClient = mailjet.connect(
-  process.env.MAILJET_API_KEY,
-  process.env.MAILJET_SECRET_KEY
+  process.env.MAILJET_API_PUBLIC_KEY,
+  process.env.MAILJET_API_PRIVATE_KEY
 );
 
 export default async function handler(req, res) {
