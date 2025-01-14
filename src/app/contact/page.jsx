@@ -4,6 +4,7 @@ import mailImg from "../../../public/mail.png";
 import phoneImg from "../../../public/phone.png";
 // import locationImg from "../../../public/location.png";
 import Footer from "../footer/page";
+import ContactusForm from "../component/ContactusForm";
 
 const Contact = () => {
   return (
@@ -27,7 +28,7 @@ const Contact = () => {
 
                 <div className="bg-[#2A2B6B0D] md:px-20 md:pt-10 p-4 mt-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="flex flex-col md:gap-16 gap-4">
+                        <div className="flex flex-col md:gap-16 gap-4 pt-2">
                             <div className="bg-white border border-[#E6E7E6] flex gap-3 p-4 rounded-sm">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#37B34A" width="30" height="30"><path d="M17.6569 15.6569L12 21.3137L6.34315 15.6569C3.21895 12.5327 3.21895 7.46734 6.34315 4.34315C9.46734 1.21895 14.5327 1.21895 17.6569 4.34315C20.781 7.46734 20.781 12.5327 17.6569 15.6569ZM5 22H19V24H5V22Z"></path></svg>
                                 <p className="text-sm">
@@ -57,9 +58,9 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div>
-                            <form className="w-full max-w-lg">
-                                {/* Full Name */}
+                        <div className="max-w-lg">
+                            {/* <form className="w-full max-w-lg">
+                                
                                 <div className="mb-4">
                                     <label
                                         htmlFor="fullname"
@@ -85,7 +86,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                {/* Email */}
+                                
                                 <div className="mb-4">
                                     <label
                                         htmlFor="email"
@@ -102,7 +103,7 @@ const Contact = () => {
                                     />
                                 </div>
 
-                                {/* Phone Number */}
+                               
                                 <div className="mb-4">
                                     <label
                                         htmlFor="phone"
@@ -119,7 +120,7 @@ const Contact = () => {
                                     />
                                 </div>
 
-                                {/* How Can I Help */}
+        
                                 <div className="mb-6">
                                     <label
                                         htmlFor="help"
@@ -135,7 +136,7 @@ const Contact = () => {
                                     />
                                 </div>
 
-                                {/* Submit Button */}
+                                
                                 <button className="bg-[#37B34A] mt-8 px-12 py-3 rounded-lg  flex items-center gap-2 text-white">
                                     Send Message
                                     <svg
@@ -153,7 +154,8 @@ const Contact = () => {
                                         />
                                     </svg>
                                 </button>
-                            </form>
+                            </form> */}
+                            <ContactusForm/>
                         </div>
                     </div>
                 </div>

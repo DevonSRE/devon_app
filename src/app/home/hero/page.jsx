@@ -1,6 +1,7 @@
 import React from "react";
 import heroImg from "../../../../public/hero.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -18,26 +19,30 @@ const Hero = () => {
               software that addresses pressing social issues.
             </p>
             <div className="pb-20 flex md:gap-4 gap-2">
-              <button className="bg-black border border-white mt-8 md:px-8 px-2 py-3 rounded-lg items-center">
-                Explore Our Solution
-              </button>
-              <button className="bg-[#37B34A] mt-8 md:px-8 px-2 py-3 rounded-lg flex items-center gap-2 ">
-                Book a Demo
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 12h14M13 6l6 6-6 6"
-                  />
-                </svg>
-              </button>
+              <Link href='/services'>
+                <button className="bg-black border border-white mt-8 md:px-8 px-2 py-3 rounded-lg items-center">
+                  Explore Our Solution
+                </button>
+              </Link>
+              <Link href='/contact'>
+                <button className="bg-[#37B34A] mt-8 md:px-8 px-2 py-3 rounded-lg flex items-center gap-2 ">
+                  Book a Demo
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14M13 6l6 6-6 6"
+                    />
+                  </svg>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

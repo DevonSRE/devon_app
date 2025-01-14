@@ -3,6 +3,7 @@ import aboutOne from "../../../../public/about_one.png";
 import aboutTwo from "../../../../public/about_two.png";
 import aboutThree from "../../../../public/about_three.png";
 import aboutFour from "../../../../public/about_four.png";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -21,23 +22,25 @@ const AboutUs = () => {
           technology, fostering collaboration and efficiency across industries.
         </p>
         <div className="flex justify-center">
-          <button className="bg-[#37B34A] text-white mt-6 px-8 py-3 rounded-lg font-light flex items-center gap-2">
-            Learn More
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 12h14M13 6l6 6-6 6"
-              />
-            </svg>
-          </button>
+          <Link href='/aboutus'>
+            <button className="bg-[#37B34A] text-white mt-6 px-8 py-3 rounded-lg font-light flex items-center gap-2">
+              Learn More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M13 6l6 6-6 6"
+                />
+              </svg>
+            </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-6">
