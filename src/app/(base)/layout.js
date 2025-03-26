@@ -7,10 +7,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <main className={`antialiased`}>
-      <header>
-        <Navbar />
-      </header>
+    <main className={`font-lexend antialiased`}>
+      <Navbar />
 
       {children}
     </main>
