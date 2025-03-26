@@ -55,7 +55,11 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
-      }
+      },
+      fontFamily: {
+        lexend: ['var(--font-lexend)'],
+        geist: ['var(--font-geist-sans)'],
+      },
     }
   },
   plugins: [require("tailwindcss-animate")],
