@@ -2,54 +2,47 @@ import React from "react";
 import heroImg from "/public/hero.png";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <div className="bg-[url('/overlay.png')] bg-cover bg-center bg-no-repeat text-white">
+    <div className="relative w-full min-h-[calc(100dvh-70px)] bg-[url('/svg/devon-hero-bg.svg')] bg-neutral-950 bg-contain bg-right bg-no-repeat text-white flex items-center">
       {/* Content Container */}
-      <div className="md:relative md:block flex justify-center h-screen md:h-fit">
-        <div className="md:absolute md:z-10 md:block flex items-center">
-          <div className="md:py-40 md:pl-24 px-4 max-w-[800px]">
-            <h1 className="font-lexend font-semibold md:text-[40px] md:pt-20 text-[28px]">
-              Empowering Change Through
-              Innovative Solutions
+      <div className="w-full min-h-full md:relative">
+        <div className="w-full h-full">
+          <div className="w-full grid grid-cols-12 gap-1">
+            <h1 className="col-span-6 col-start-2 font-bold md:text-5xl md:pt-20 text-[28px]">
+              Empowering <span className="text-green-500">Access to <br /> Justice</span> through Innovative Legal Solutions
             </h1>
-            <p className="font-lexend font-light text-sm md:mt-6 mt-4 max-w-[480px]">
-              At Devon Technology, we strive to lead the way in developing
-              software that addresses pressing social issues.
+
+            <p className="col-span-full col-start-2 font-light text-sm md:mt-6 mt-4 max-w-[600px]">
+              At the forefront of legal technology, we craft bespoke digital solutions that enhace access to justice. Our mission is to modernize legal workflows, ensuring efficiency and equity for all legal professionals.
             </p>
-            <div className="pb-20 flex md:gap-4 gap-2">
-              <Link href='/services'>
-                <button className="bg-black border border-white mt-8 md:px-8 px-2 py-3 rounded-lg items-center">
-                  Explore Our Solution
-                </button>
+
+            <div className="col-span-6 col-start-2 py-16 flex md:gap-4 gap-2">
+              <Link href='/solutions'>
+                <Button className="bg-green-600" size={'lg'}>
+                  Explore Our Solutions
+                </Button>
               </Link>
               <Link href='/contact'>
-                <button className="bg-[#37B34A] mt-8 md:px-8 px-2 py-3 rounded-lg flex items-center gap-2 ">
-                  Book a Demo
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 12h14M13 6l6 6-6 6"
-                    />
-                  </svg>
-                </button>
+                <Button size={'lg'} variant={'secondary'}>
+                  Partner With Us
+                </Button>
               </Link>
             </div>
+
           </div>
         </div>
-        <div className="md:flex justify-end items-center z-0 hidden">
-          <Image src={heroImg} alt="An image of the Ecllipse" />
-        </div>
       </div>
+
+      <Image
+        src="/svg/devon-hero-illustration.svg"
+        alt="A pattern of Devon"
+        width={500}
+        height={500}
+        className="size-96 absolute bottom-0 -left-14"
+      />
     </div>
   );
 };
