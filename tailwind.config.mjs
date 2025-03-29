@@ -9,6 +9,9 @@ export default {
   darkMode: ['media', "class"],
   theme: {
     extend: {
+      cursor: {
+        'fancy': 'url(/public/images/devon-solutions.png), pointer',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
