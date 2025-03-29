@@ -71,7 +71,11 @@ body {
 
     --chart-5: 27 87% 67%;
 
-    --radius: 0.5rem
+    --radius: 0.5rem;
+
+    --devon-purple: 101 88 165;
+
+    --devon-indigo: 41 45 107;
   }
   .dark {
 

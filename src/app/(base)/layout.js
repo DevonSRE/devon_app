@@ -1,4 +1,5 @@
 import Navbar from "@/features/homepage/components/navbar";
+import Footer from "@/features/homepage/components/footer";
 
 export const metadata = {
   title: "Devon",
@@ -11,6 +12,8 @@ export default function RootLayout({ children }) {
       <Navbar />
 
       {children}
+
+      <Footer />
     </main>
   );
 }

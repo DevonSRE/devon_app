@@ -11,7 +11,7 @@ const navbarItems = [
     name: 'logo',
     category: 'logo',
     value: 'logo',
-    url: 'logo',
+    url: '/',
   },
   {
     id: 2,

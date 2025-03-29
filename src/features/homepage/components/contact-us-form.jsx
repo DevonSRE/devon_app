@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import React from "react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -19,7 +20,7 @@ const initialErrors = {
   message: "",
 };
 
-const ContactusForm = () => {
+const ContactusForm = ({ className }) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState(initialErrors);
   const [touched, setTouched] = useState({});
@@ -98,7 +99,7 @@ const ContactusForm = () => {
   };
 
   return (
-    <div className="pt-2">
+    <div className={cn("pt-2", className)}>
       <form className="w-full text-left" onSubmit={handleSubmit}>
         {/* Full Name */}
         <div className="mb-6">
@@ -202,10 +203,10 @@ const ContactusForm = () => {
             Object.values(values).some((value) => !value.trim())
           }
           className={`bg-[#37B34A] mt-8 px-12 py-3 rounded-lg text-white cursor-pointer ${isLoading ||
-              Object.values(errors).some((error) => error) ||
-              Object.values(values).some((value) => !value.trim())
-              ? "opacity-50 cursor-not-allowed"
-              : ""
+            Object.values(errors).some((error) => error) ||
+            Object.values(values).some((value) => !value.trim())
+            ? "opacity-50 cursor-not-allowed"
+            : ""
             }`}
         >
           {isLoading ? "Sending..." : "Send Message"}

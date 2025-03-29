@@ -1,76 +1,93 @@
 import Image from "next/image";
+// import Link from "next/link";
 import aboutOne from "/public/about_one.png";
 import aboutTwo from "/public/about_two.png";
 import aboutThree from "/public/about_three.png";
 import aboutFour from "/public/about_four.png";
-import Link from "next/link";
+import { SectionTag, SectionTitle } from "@/components/section-util-tags";
+import { Button } from "@/components/ui/button";
 
-const AboutUs = () => {
+const AboutUs = ({ showButtons = true, tagColor = "purple" }) => {
   return (
-    <div className="flex justify-center items-center text-center">
-      <div className="px-4 max-w-[960px] text-[#070707] mt-20">
-        <div className="bg-[#EC1C241A] inline-block rounded p-1 px-2 mb-4">
-          <p className="text-[#EC1C24] text-sm font-light">About Us</p>
-        </div>
-        <h1 className="font-lexend font-semibold text-[28px] mb-8">
-          Empowering Organizations to Drive Social Change
-        </h1>
-        <p className="font-light text-sm mx-auto max-w-[700px]">
-          At Devon Technology Limited, our vision is to lead in developing
-          software that empowers organizations to tackle social issues
-          effectively. We believe in creating lasting positive impact through
-          technology, fostering collaboration and efficiency across industries.
+    <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-8 py-32">
+      <div className="col-span-full col-start-2">
+        <SectionTag color={tagColor} text="About Us" />
+      </div>
+
+      <div className="col-span-full col-start-2">
+        <SectionTitle className="text-4xl">
+          Who We Are
+        </SectionTitle>
+      </div>
+
+      <div className="col-span-full col-start-2 col-end-12 font-light">
+        <p>
+          At Devon Technologies LTD, we are redefining the legal landscape by building innovative digital solutions that enhance access to justice. Our mission is to empower legal professionals, with technology that streamlines workflows, improves efficiency, and facilitates seamless legal processes.
         </p>
-        <div className="flex justify-center">
-          <Link href='/aboutus'>
-            <button className="bg-[#37B34A] text-white mt-6 px-8 py-3 rounded-lg font-light flex items-center gap-2">
-              Learn More
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 12h14M13 6l6 6-6 6"
-                />
-              </svg>
-            </button>
-          </Link>
+
+        <p>
+          With a deep understanding of the legal sector&apos;s unique challenges, we craft tailor-made solutions that address the evolving needs of modern legal systems. From Judic AI, our advanced legal speech processing platform, to our e-Filing Management System, we are committed to delivering cutting-edge tools that simplify case management, enable virtual hearings, and ensure secure document handling.
+        </p>
+
+        <p>
+          Driven by innovation and a commitment to justice, we bridge the gap between legal institutions and technology—creating solutions that not only optimize daily tasks but also pave the way for a more accessible and efficient legal system.
+        </p>
+
+        <br />
+
+        <p>
+          At Devon Technologies LTD, we don&apos;t just build technology—we shape the future of legal processes.
+        </p>
+      </div>
+
+      {showButtons && (
+        <div className="col-span-full col-start-2 font-light flex gap-5 items-center">
+          <Button className="bg-devon-purple hover:bg-devon-purple/85" size="lg">
+            Learn More
+          </Button>
+
+          <Button variant="outline" size="lg" className="ring-neutral-800 ring-2">
+            Partner With Us
+          </Button>
         </div>
+      )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-6">
-          {/* Left Image Section */}
-          <div className="md:space-y-14 space-y-6">
-            <div>
-              <Image src={aboutOne} alt="An image of people collaborating" />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <Image
-                src={aboutTwo}
-                alt="An image of people collaborating"
-                className="w-full h-auto"
-              />
-              <Image
-                src={aboutThree}
-                alt="An image of people collaborating"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-
-          {/* Right Large Image Section */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={aboutFour}
-              alt="An image of people collaborating"
-              className="w-full max-h-[500px] object-cover"
-            />
-          </div>
+      <div className="col-span-full col-start-2 col-end-12 grid grid-cols-8 grid-rows-2 gap-5">
+        <div className="col-span-3 bg-neutral-100 h-44 w-full rounded-md overflow-hidden">
+          <Image
+            src={aboutOne}
+            alt=""
+            height={500}
+            width={500}
+            className="size-full object-cover aspect-video"
+          />
+        </div>
+        <div className="col-span-3 bg-neutral-100 h-44 w-full rounded-md overflow-hidden">
+          <Image
+            src={aboutTwo}
+            alt=""
+            height={500}
+            width={500}
+            className="size-full object-cover aspect-video"
+          />
+        </div>
+        <div className="col-span-2 col-start-7 row-span-full bg-neutral-100 h-full w-full rounded-md overflow-hidden">
+          <Image
+            src={aboutThree}
+            alt=""
+            height={500}
+            width={500}
+            className="size-full object-cover aspect-video"
+          />
+        </div>
+        <div className="col-span-6  bg-neutral-100 h-44 w-full rounded-md overflow-hidden">
+          <Image
+            src={aboutFour}
+            alt=""
+            height={500}
+            width={500}
+            className="size-full object-cover aspect-video"
+          />
         </div>
       </div>
     </div>

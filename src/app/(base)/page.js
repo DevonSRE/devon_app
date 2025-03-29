@@ -3,25 +3,21 @@
 import Hero from "@/features/homepage/components/hero";
 import AboutUs from "@/features/homepage/components/about";
 import Solutions from "@/features/homepage/components/solutions";
-import Projects from "@/features/homepage/components/project";
-import Success from "@/features/homepage/components/success";
+import Products from "@/features/homepage/components/products";
+import OurImpact from "@/features/homepage/components/our-impact";
 import ContactUs from "@/features/homepage/components/contact-us";
-import Footer from "@/features/homepage/components/footer";
 
 
 
 export default function Home() {
   return (
-    <div className="">
-      <main>
-        <Hero />
-        <AboutUs />
-        <Solutions />
-        <Projects />
-        <Success />
-        <ContactUs />
-        <Footer />
-      </main>
-    </div>
+    <main>
+      <Hero />
+      <Solutions />
+      <OurImpact />
+      <AboutUs />
+      <Products />
+      <ContactUs />
+    </main>
   );
 }

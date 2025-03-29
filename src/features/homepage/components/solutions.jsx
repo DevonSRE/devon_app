@@ -1,92 +1,80 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
-import solutionsOne from "/public/solutions-one.png";
-import solutionsTwo from "/public/solutions-two.png";
-import solutionsThree from "/public/solutions-three.png";
+import solutionsPlaceholder from "/public/images/devon-solutions.png";
+import { SectionTag, SectionTitle } from "@/components/section-util-tags";
+import { Separator } from "@/components/ui/separator";
+import { BoltIcon } from "@/components/icons/bolt-icon";
+import { BoltBoardIcon } from "@/components/icons/bolt-board-icon";
 
 const Solutions = () => {
+  const headlines = [
+    {
+      id: 1,
+      text: "Enhanced Efficiency",
+      description: "Reduce administrative burdens and focus more on delivery justice to your clients",
+      icon: <BoltBoardIcon className="size-8" />,
+    },
+    {
+      id: 2,
+      text: "Improved Access",
+      description: "Bridge the gap between legal services and the public with our innovative tools.",
+      icon: <BoltIcon className="size-8" />,
+    },
+  ];
+
   return (
-    <div className="flex justify-center">
-      <div className="text-center mt-10 text-[#070707] px-4 max-w-[1000px]">
-        <div className="bg-[#EC1C241A] inline-block rounded p-1 px-2 mt-20">
-          <p className="text-[#EC1C24] text-sm font-light">Our Solutions</p>
-        </div>
-        <h1 className="font-lexend font-semibold text-[28px] mb-4">
-          Innovative Solutions for a Smarter Future
-        </h1>
-        <p className="font-light text-sm mx-auto max-w-[450px]">
-          We are passionate about building technology that addresses the
-          challenges you face every day.
+    <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-10 py-32">
+      <div className="col-span-5 col-start-2">
+        <SectionTag text="Our Solutions" color={'green'} />
+      </div>
+
+      <div className="col-span-5 col-start-2">
+        <SectionTitle className="text-4xl">
+          Transforming Legal Workflows with Tailored <span className="text-green-500">Digital Solutions for Professionals <br /> </span>
+        </SectionTitle>
+      </div>
+
+      <div className="col-span-5 col-start-2">
+        <p className="font-light">
+          Our innovative digital solutions streamline legal processes, enhancing efficiency and accessibility. Empower your practice with technology designed specifically for legal professionals.
         </p>
+      </div>
 
-        {/* First Grid of Pictures */}
-        <div className="mt-10 text-left">
-          <div className="md:flex gap-4 justify-center mb-6">
-            <div className="border-2 border-[#E6E7E6] p-4 rounded-md mb-4 md:mb-0">
-              <Image
-                src={solutionsOne}
-                alt="An image of a boy texting"
-                className=""
-                height={150}
-              />
-              <h2 className="font-lexend font-semibold text-[24px] mb-3">
-                Social Impact technology
-              </h2>
-              <p className="font-light text-sm">
-                Harnessing technological innovations and tools to address social challenges and create positive change within communities.
-              </p>
-            </div>
-            <div className="border-2 border-[#E6E7E6] p-4 rounded-md md:max-w-[370px]">
-              <Image
-                src={solutionsTwo}
-                alt="An image of a boy texting"
-                className=""
-                height={150}
-              />
-              <h2 className="font-lexend font-semibold text-[24px] mb-3">
-                Broad Industry Application
-              </h2>
-              <p className="font-light text-sm">
-                We pride ourselves on our ability to deliver solutions that span a wide range of industries
-              </p>
-            </div>
-          </div>
+      <div className="col-span-5 col-start-2 flex items-start justify-start gap-5 h-fit">
+        {headlines.map((headline, index) => (
+          <Fragment key={headline.id}>
+            <SolutionsHeadline headline={headline} />
 
-          {/* Second Grid of Pictures */}
-          <div className="md:flex gap-4 justify-center">
-            <div className="border-2 border-[#E6E7E6] p-4 rounded-md md:max-w-[370px] mb-4 md:mb-0">
-              <Image
-                src={solutionsThree}
-                alt="An image of a boy texting"
-                className=""
-                height={150}
-              />
-              <h2 className="font-lexend font-semibold text-[24px] mb-3">
-                Multi-Tenant Expertise
-              </h2>
-              <p className="font-light text-sm">
-                We design systems that support multiple users or organizations enhancing efficiency and scalability.
-              </p>
-            </div>
-            <div className="border-2 border-[#E6E7E6] p-4 rounded-md">
-              <Image
-                src={solutionsOne}
-                alt="An image of a boy texting"
-                className=""
-                height={150}
-              />
-              <h2 className="font-lexend font-semibold text-[24px] mb-3">
-                Flexible Financial Solutions
-              </h2>
-              <p className="font-light text-sm">
-                We make it easier for organizations to access the technology they need to drive social changes.
-              </p>
-            </div>
-          </div>
-        </div>
+            {index + 1 < headlines.length && (<Separator className="h-48" orientation="vertical" />)}
+          </Fragment>
+        ))}
+      </div>
+
+      <div className="col-span-5 col-start-7 row-span-4 row-start-1 bg-gray-200 h-full rounded-xl overflow-hidden">
+        <Image
+          src={solutionsPlaceholder}
+          alt="An image of a boy texting"
+          height={500}
+          width={500}
+          className="object-cover object-center aspect-auto size-full"
+        />
       </div>
     </div>
   );
 };
 
 export default Solutions;
+
+
+const SolutionsHeadline = ({ headline }) => {
+  return (
+    <div className="w-full space-y-4">
+      <div className="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-green-100 to-white">
+        {headline.icon}
+      </div>
+
+      <div className="font-semibold text-lg">{headline.text}</div>
+      <div className="font-light">{headline.description}</div>
+    </div>
+  );
+}
