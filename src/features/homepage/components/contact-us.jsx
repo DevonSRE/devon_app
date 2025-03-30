@@ -6,7 +6,7 @@ import { SectionTag, SectionTitle } from "@/components/section-util-tags";
 
 const ContactUs = () => {
   return (
-    <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-y-8 gap-x-16 py-32">
+    <div className={"max-w-screen-xl mx-auto grid grid-cols-12 gap-y-8 gap-x-16 py-32"}>
       <div className="col-span-5 col-start-2">
         <SectionTag color={'red'} text="Contact Us" />
       </div>
@@ -31,7 +31,7 @@ const ContactUs = () => {
         />
       </div>
 
-      <div className="row-start-1 row-span-4 col-start-7 col-end-12">
+      <div className="row-start-1 row-span-4 col-start-7 col-end-12 p-8 bg-white rounded-lg">
         <ContactusForm className="size-full" />
       </div>
     </div>
