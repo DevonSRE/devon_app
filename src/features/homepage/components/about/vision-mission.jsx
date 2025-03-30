@@ -6,7 +6,7 @@ const VisionMission = () => {
   return (
     <div className="bg-neutral-100">
       <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-8 py-32">
-        <Card className="relative overflow-hidden border-none col-start-2 col-span-5 row-span-2 p-10 shadow-none">
+        <Card className="relative overflow-hidden border-none col-start-2 col-span-5 row-span-2 p-8 shadow-none">
           <CardHeader>
             <CardTitle>
               <SectionTitle className="text-4xl text-green-500">Mission Statement</SectionTitle>
@@ -24,7 +24,7 @@ const VisionMission = () => {
           <p className="absolute -bottom-72 -right-5 font-bold text-[420px] text-green-500/10">M</p>
         </Card>
 
-        <Card className="relative overflow-hidden border-none col-start-7 col-end-12 p-10 shadow-none">
+        <Card className="relative overflow-hidden border-none col-start-7 col-end-12 p-8 shadow-none">
           <CardHeader>
             <CardTitle>
               <SectionTitle className="text-4xl text-devon-purple">Vision Statement</SectionTitle>
@@ -38,7 +38,7 @@ const VisionMission = () => {
           <p className="absolute -bottom-72 -right-5 font-bold text-[420px] text-devon-purple/10">V</p>
         </Card>
 
-        <Card className="relative overflow-hidden border-none col-start-7 col-end-12 p-10 shadow-none">
+        <Card className="relative overflow-hidden border-none col-start-7 col-end-12 p-8 shadow-none">
           <CardHeader>
             <CardTitle>
               <SectionTitle className="text-4xl text-devon-indigo">The Goal</SectionTitle>

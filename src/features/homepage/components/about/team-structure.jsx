@@ -7,6 +7,7 @@ import { SectionTag, SectionTitle } from "@/components/section-util-tags";
 import Image from "next/image";
 import devonStamp from "/public/svg/devon-stamp-logo.svg"
 import { motion } from "motion/react";
+import toggleIcon from "/public/svg/devon-subcontent-toggle.svg"
 
 
 const TeamStructure = () => {
@@ -84,9 +85,17 @@ const TeamStructure = () => {
                 <motion.div
                   variants={subContentToggleVariants}
                   animate={showSubContent ? "animate" : "initial"}
-                  className="bg-emerald-500 text-white py-2 px-5 w-fit cursor-fancy"
+                  className="bg-emerald-500 text-white py-2 px-8 w-fit cursor-fancy"
                   onClick={() => { setShowSubContent((prev) => !prev) }}
-                >Open</motion.div>
+                >
+                  <Image
+                    src={toggleIcon}
+                    alt="toggle-icon"
+                    height={24}
+                    width={24}
+                    className="object-contain object-center size-6"
+                  />
+                </motion.div>
 
                 <motion.div
                   variants={subContentItemsVariants}

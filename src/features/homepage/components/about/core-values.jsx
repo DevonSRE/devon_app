@@ -1,19 +1,24 @@
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
 import { Carousel } from "@/components/ui/apple-cards-carousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import innovation from "/public/svg/devon-innovation-logo.svg";
+import integrity from "/public/svg/devon-integrity-logo.svg";
+import accessibility from "/public/svg/devon-accessibility-logo.svg";
+import collabo from "/public/svg/devon-collabo-logo.svg";
+import Image from "next/image";
 
 const CoreValues = () => {
   const coreValues = [
-    { id: 1, name: "Innovation", icon: <p>Innovation</p>, },
-    { id: 2, name: "Integrity", icon: <p>Integrity</p>, },
-    { id: 3, name: "Collaboration", icon: <p>Collaboration</p>, },
-    { id: 4, name: "Accessibility", icon: <p>Accessibility</p>, },
-    { id: 5, name: "Customer Centricity", icon: <p>Customer Centricity</p>, },
-    { id: 6, name: "Excellence", icon: <p>Excellence</p>, },
+    { id: 1, name: "Innovation", icon: innovation, },
+    { id: 2, name: "Integrity", icon: integrity, },
+    { id: 3, name: "Collaboration", icon: collabo, },
+    { id: 4, name: "Accessibility", icon: accessibility, },
+    { id: 5, name: "Customer Centricity", icon: integrity, },
+    { id: 6, name: "Excellence", icon: innovation, },
   ];
 
   const items = coreValues.map((value) => (
-    <CoreValueCard key={value.id} name={value.name} icon={value.icon} />
+    <CoreValueCard key={value.id} {...value} />
   ));
 
   return (
@@ -38,16 +43,16 @@ const CoreValues = () => {
 };
 
 
-const CoreValueCard = ({ name, icon }) => {
+const CoreValueCard = (props) => {
   return (
-    <Card className="relative shadow-none border-none h-96 w-72 rounded-xl bg-green-500/10">
+    <Card className="overflow-hidden relative shadow-none border-none h-96 w-72 rounded-xl bg-green-500/10">
       <CardHeader className="pt-20">
-        <CardTitle className="text-xl text-center">{name}</CardTitle>
+        <CardTitle className="text-xl text-center">{props.name}</CardTitle>
       </CardHeader>
 
       <CardContent>
-        <div className="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center absolute bottom-0 right-0">
-          {icon}
+        <div className="w-52 h-52 flex items-center justify-center absolute -bottom-4 right-0">
+          <Image src={props.icon} alt={props.name} height={500} width={500} className="object-contain object-center" />
         </div>
       </CardContent>
     </Card>

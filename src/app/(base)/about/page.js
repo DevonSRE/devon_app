@@ -17,7 +17,9 @@ export default async function Page() {
       <TeamStructure />
       <Team />
       <ChooseUs />
-      <ContactUs />
+      <div className="bg-neutral-100">
+        <ContactUs />
+      </div>
     </main>
   );
 }
