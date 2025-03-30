@@ -17,6 +17,7 @@ export default {
         foreground: 'hsl(var(--foreground))',
         "devon-purple": 'rgb(var(--devon-purple))',
         "devon-indigo": 'rgb(var(--devon-indigo))',
+        "devon-green": 'hsl(var(--devon-green))',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
