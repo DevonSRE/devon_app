@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
 
-import fe from "/public/images/devon-fe.png";
+import board1 from "/public/images/devon-board-obiora.png";
 import defaultImage from "/public/svg/devon-white-plain-logo.svg";
 import devonPatterns from "/public/svg/devon-d-digital-asset-outline.svg";
 
@@ -92,7 +92,7 @@ const teamMembers = [
     id: 3,
     name: "Mr. Obiora Chukwumba",
     role: "Board Member",
-    imageUrl: fe,
+    imageUrl: board1,
   },
 ];
 
