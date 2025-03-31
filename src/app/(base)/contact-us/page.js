@@ -1,5 +1,11 @@
+import ContactUs from "@/features/homepage/components/contact/contact-us";
+import { ContactUsHero } from "@/features/homepage/components/contact/contact-us-hero";
+
 export default async function Page() {
   return (
-    <div>Contact us Page</div>
+    <main>
+      <ContactUsHero />
+      <ContactUs />
+    </main>
   );
 }
