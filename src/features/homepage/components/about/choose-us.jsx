@@ -4,19 +4,39 @@ import * as motion from "motion/react-client"
 import { SectionTitle } from "@/components/section-util-tags";
 
 import { InnovationIcon, CommitmentIcon, SecureIcon, TailorIcon } from "@/components/icons/choose-icons";
+import Image from "next/image";
+import devonPatterns from "/public/svg/devon-d-digital-asset-outline.svg";
 
 const ChooseUs = () => {
   return (
-    <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-8 gap-x-10 py-32">
-      <div className="col-start-2 col-end-12 grid grid-cols-12 gap-12">
-        <div className="h-48 w-72 max-w-full col-span-4">
-          <SectionTitle className="mb-2.5 text-4xl">Why Choose Us</SectionTitle>
-          <p className="font-light">We understand the unique challenges of the legal sector. We are commited to empowering legal professionals to do their best work.</p>
-        </div>
+    <div className="overflow-hidden">
+      <div className="relative max-w-screen-xl mx-auto grid grid-cols-12 gap-8 gap-x-10 py-60">
+        {/* patterns top right */}
+        <Image
+          src={devonPatterns}
+          alt="patterns"
+          height={700}
+          width={700}
+          className="absolute -top-80 -right-96 opacity-15 object-contain object-center -scale-y-100"
+        />
+        {/* patterns bottom left */}
+        <Image
+          src={devonPatterns}
+          alt="patterns"
+          height={700}
+          width={700}
+          className="absolute -bottom-72 -left-96 opacity-15 object-contain object-center -scale-x-100 scale-y-100"
+        />
+        <div className="col-start-2 col-end-12 grid grid-cols-12 gap-12">
+          <div className="h-48 w-72 max-w-full col-span-4">
+            <SectionTitle className="mb-2.5 text-4xl">Why Choose Us</SectionTitle>
+            <p className="font-light">We understand the unique challenges of the legal sector. We are commited to empowering legal professionals to do their best work.</p>
+          </div>
 
-        {reasons.map((reason) => (
-          <TiltingCard key={reason.id} {...reason} className="col-span-4" />
-        ))}
+          {reasons.map((reason) => (
+            <TiltingCard key={reason.id} {...reason} className="col-span-4" />
+          ))}
+        </div>
       </div>
     </div>
   );

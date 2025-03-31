@@ -1,5 +1,6 @@
 import AboutUs from "@/features/homepage/components/about";
 import { AboutUsHero } from "@/features/homepage/components/about/about-us-hero";
+import { BoardMembers } from "@/features/homepage/components/about/board-members";
 import { ChooseUs } from "@/features/homepage/components/about/choose-us";
 import { CoreValues } from "@/features/homepage/components/about/core-values";
 import { Team } from "@/features/homepage/components/about/team";
@@ -16,6 +17,7 @@ export default async function Page() {
       <CoreValues />
       <TeamStructure />
       <Team />
+      <BoardMembers />
       <ChooseUs />
       <div className="bg-neutral-100">
         <ContactUs />
