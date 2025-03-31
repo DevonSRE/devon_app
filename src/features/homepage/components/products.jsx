@@ -15,23 +15,23 @@ const Projects = () => {
     {
       id: 1, title: "Judic AI", img: (
         <div className="absolute bottom-0 right-0 size-full">
-          <Image src={judicAiProduct} alt="judic ai" height={500} width={500} className="absolute bottom-0 right-0 w-auto h-auto max-h-40 aspect-video object-contain object-center" />
+          <Image src={judicAiProduct} alt="judic ai" height={500} width={500} className="absolute bottom-0 -right-2 w-full h-full aspect-video object-contain object-center" />
         </div>
-      ), bgColor: "bg-[#E4B33D]", textColor: "text-white",
+      ), bgColor: "bg-devon-judic", textColor: "text-white",
     },
     {
       id: 2, title: "DocketMaster", img: (
         <div className="absolute bottom-0 right-0 size-full">
-          <Image src={docketmasterProduct} alt="judic ai" height={500} width={500} className="absolute bottom-0 right-0 w-auto h-auto max-h-40 aspect-video object-contain object-center" />
+          <Image src={docketmasterProduct} alt="judic ai" height={500} width={500} className="absolute -bottom-3 right-0 w-full h-full aspect-video object-contain object-center" />
         </div>
-      ), bgColor: "bg-[#5F0000]", textColor: "text-[#FCFFBE]",
+      ), bgColor: "bg-devon-docketmaster", textColor: "text-[#FCFFBE]",
     },
     {
       id: 3, title: "LawKonnect", img: (
         <div className="absolute bottom-0 right-0 size-full">
-          <Image src={lawkonnectProduct} alt="judic ai" height={500} width={500} className="absolute bottom-0 right-0 w-auto h-auto max-h-40 aspect-video object-contain object-center" />
+          <Image src={lawkonnectProduct} alt="judic ai" height={500} width={500} className="absolute bottom-0 -right-6 w-full h-full aspect-video object-contain object-center" />
         </div>
-      ), bgColor: "bg-[#179CC7]", textColor: "text-white",
+      ), bgColor: "bg-devon-lawkonnect", textColor: "text-white",
     },
   ];
 
@@ -60,7 +60,7 @@ const Projects = () => {
           </Button>
         </div>
 
-        <div className="col-span-5 col-start-7 col-end-12 h-full row-start-1 row-end-7 w-full flex flex-col gap-5">
+        <div className="col-span-5 col-start-6 col-end-12 h-full row-start-1 row-end-7 w-full flex flex-col gap-5">
           {projects.map((project) => (
             <ProductCard key={project.id} {...project} />
           ))}
