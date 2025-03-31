@@ -5,8 +5,6 @@ import Image from "next/image";
 
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
 
-import ceo from "/public/images/devon-ceo.png";
-import pm from "/public/images/devon-pm.png";
 import fe from "/public/images/devon-fe.png";
 import defaultImage from "/public/svg/devon-white-plain-logo.svg";
 import devonPatterns from "/public/svg/devon-d-digital-asset-outline.svg";
