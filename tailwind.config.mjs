@@ -15,6 +15,9 @@ export default {
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        "devon-judic": 'hsl(var(--devon-judic-bg))',
+        "devon-docketmaster": 'hsl(var(--devon-docketmaster-bg))',
+        "devon-lawkonnect": 'hsl(var(--devon-lawkonnect-bg))',
         "devon-purple": 'rgb(var(--devon-purple))',
         "devon-indigo": 'rgb(var(--devon-indigo))',
         "devon-green": 'hsl(var(--devon-green))',

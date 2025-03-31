@@ -73,12 +73,19 @@ body {
 
     --radius: 0.5rem;
 
+    --devon-judic-bg: 42 76 57%;
+
+    --devon-docketmaster-bg: 0 100 19%;
+
+    --devon-lawkonnect-bg: 195 79 44%;
+
     --devon-purple: 101 88 165;
 
     --devon-indigo: 41 45 107;
 
     --devon-green: 151 39 42%;
   }
+
   .dark {
 
     --background: 222.2 84% 4.9%;
@@ -135,8 +142,8 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
-
