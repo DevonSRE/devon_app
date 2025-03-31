@@ -1,11 +1,12 @@
 import Image from "next/image";
 // import Link from "next/link";
-import aboutOne from "/public/about_one.png";
-import aboutTwo from "/public/about_two.png";
-import aboutThree from "/public/about_three.png";
-import aboutFour from "/public/about_four.png";
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
 import { Button } from "@/components/ui/button";
+
+import aboutOne from "/public/images/devon-about-1.png";
+import aboutTwo from "/public/images/devon-about-2.png";
+import aboutThree from "/public/images/devon-about-3.png";
+import aboutFour from "/public/images/devon-about-wide.png";
 
 const AboutUs = ({ showButtons = true, tagColor = "purple" }) => {
   return (
