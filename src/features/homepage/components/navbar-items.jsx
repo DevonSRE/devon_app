@@ -1,7 +1,7 @@
 "use client";
 
 
-import { forwardRef, Fragment } from "react";
+import { forwardRef, Fragment, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -14,32 +14,42 @@ import {
   NavigationMenuTrigger,
   // navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { CircleAlertIcon, FileTextIcon, GemIcon, MicIcon, PhoneCallIcon, UsersIcon } from "lucide-react";
+import { CircleAlertIcon, FileTextIcon, GemIcon, MenuIcon, MicIcon, PhoneCallIcon, UsersIcon, XIcon } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { AnimatePresence, motion } from "motion/react";
 
 
 
 export function NavbarItems({ navItems }) {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center justify-between gap-4">
-      <ul className="flex items-center justify-between gap-4">
-        {navItems.map((item) => (
-          <Fragment key={item.id}>
-            {item.category === "links" && (
-              <li key={item.id} className="relative">
-                <Link href={item.url} className={cn("py-0.5 px-1 size-full font-light", {
-                  "after:absolute after:w-full after:h-1.5 after:bg-white after:z-10 after:left-0 after:-bottom-6 font-medium": pathname === item.url
-                })}
-                >{item.value}</Link>
-              </li>
-            )}
-          </Fragment>
-        ))}
-      </ul>
+    <>
+      <nav className="flex items-center justify-between gap-4">
+        <NavLinks isOpen={navbarOpen} setIsOpen={setNavbarOpen} navItems={navItems} pathname={pathname} />
 
-      <ExploreNavMenu />
-    </nav>
+        <div className="hidden md:block">
+          <ExploreNavMenu />
+        </div>
+
+        <div className="menu-bar lg:hidden">
+          <Button
+            variant={'ghost'}
+            size={'icon'}
+            className={cn(
+              "h-8 w-8 [&_svg]:size-5",
+              { "text-black hover:bg-black/10": navbarOpen, "hover:bg-black/15 text-black": !navbarOpen },
+            )}
+            onClick={() => setNavbarOpen((prev) => !prev)}
+          >
+            {navbarOpen
+              ? <XIcon />
+              : <MenuIcon />}
+          </Button>
+        </div>
+      </nav>
+    </>
   );
 }
 
@@ -121,6 +131,79 @@ const exploreItems = {
   ],
 };
 
+
+const NavLinks = ({ isOpen, setIsOpen, navItems, pathname }) => {
+  return (
+    <>
+      <ul className="hidden md:flex items-center justify-between gap-4">
+        {navItems.map((item) => (
+          <Fragment key={item.id}>
+            {item.category === "links" && (
+              <li key={item.id} className="relative">
+                <Link href={item.url} className={cn("py-0.5 px-1 size-full font-light", {
+                  "after:absolute after:w-full after:h-1.5 after:bg-white after:z-10 after:left-0 after:-bottom-6 font-medium": pathname === item.url
+                })}
+                >{item.value}</Link>
+              </li>
+            )}
+          </Fragment>
+        ))}
+      </ul>
+
+      <AnimatePresence mode="wait">
+        {isOpen && (
+          <motion.div
+            key={isOpen}
+            initial={{ x: "100%" }}
+            animate={{ x: "0%", transition: { duration: 0.3 } }}
+            exit={{ x: "100%", transition: { duration: 0.3 } }}
+            className="lg:hidden bg-white h-[calc(100dvh-4rem)] w-dvw fixed top-16 left-0 right-0 bottom-0 p-6 space-y-10"
+          >
+            <ul className="space-y-3 w-full">
+              {navItems.map((item) => {
+                const isActive = pathname === item.url;
+
+                return (
+                  <Fragment key={item.id}>
+                    {item.category === "links" && (
+                      <li className="w-full h-fit">
+                        <Link
+                          onClick={() => {
+                            setIsOpen(false)
+                          }}
+                          href={`${item.url}`}
+                          className={cn(
+                            "!w-full h-full py-1 px-2 rounded text-base hover:cursor-pointer hover:bg-black/5 transition-colors",
+                            { 'font-semibold bg-black/5': isActive },
+                          )}
+                        >
+                          <span className="w-full">{item.value}</span>
+                        </Link>
+                      </li>
+                    )}
+                  </Fragment>
+                )
+              })}
+            </ul>
+
+            <Link
+              href={'/contact-us'}
+              className={cn(
+                buttonVariants({
+                  variant: "default",
+                }),
+                'w-full',
+              )}
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
 
 const ExploreNavMenu = () => {
   return (
