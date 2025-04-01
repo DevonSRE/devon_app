@@ -16,8 +16,8 @@ export default async function Page() {
       <VisionMission />
       <CoreValues />
       <TeamStructure />
-      <Team />
       <BoardMembers />
+      <Team />
       <ChooseUs />
       <div className="bg-neutral-100">
         <ContactUs />
