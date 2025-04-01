@@ -13,7 +13,7 @@ import {
 export default function Navbar() {
   return (
     <NavigationMenu className="bg-white z-50 w-full max-w-full">
-      <header className="sticky top-0 bg-white z-50 w-full">
+      <header className="fixed top-0 bg-white z-50 w-full">
         <div className="relative size-full flex items-center justify-between px-5 md:px-24 py-4 bg-white after:absolute after:bg-[url('/svg/devon-brand-patterns.svg')] after:w-full after:h-1 after:left-0 after:bottom-0 after:z-0">
           <div>
             {navbarItems.map((item) => (

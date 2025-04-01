@@ -8,38 +8,27 @@ import Image from "next/image";
 // import Image from "next/image";
 
 const OurImpact = () => {
-  const stats = [
-    {
-      id: 1,
-      text: "95%",
-      description: "Client satisfaction rate based on feedback surveys.",
-    },
-    {
-      id: 2,
-      text: "100",
-      description: "Successful project completed in the last year.",
-    },
-  ];
-
   return (
     <div className="bg-neutral-950 text-white relative">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-10 py-52">
-        {/* pattern design */}
-        <div className="bg-[url('/svg/devon-logo-digital-asset.svg')] bg-left-top bg-no-repeat w-full h-24 absolute top-0 left-0" />
+      <div className="max-w-screen-sm md:max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 pt-48 pb-32 md:py-52 px-5 md:px-0">
+        {/* pattern design desktop */}
+        <div className="hidden md:block bg-[url('/svg/devon-logo-digital-asset.svg')] bg-left-top bg-no-repeat w-full h-24 absolute top-0 left-0" />
+        {/* pattern design mobile */}
+        <div className="md:hidden bg-[url('/svg/devon-logo-digital-asset.svg')] bg-left-top bg-no-repeat bg-contain w-full h-20 absolute top-0 left-0" />
 
-        <div className="col-span-5 col-start-2">
-          <SectionTitle className="text-4xl">
+        <div className="col-span-full md:col-span-5 col-start-1 md:col-start-2">
+          <SectionTitle className="text-2xl md:text-4xl">
             <span className="text-devon-purple">Our Impact </span> Through <br /> Innovative Software Solutions
           </SectionTitle>
         </div>
 
-        <div className="col-span-5 col-start-2">
+        <div className="col-span-full md:col-span-5 col-start-1 md:col-start-2">
           <p className="font-light text-neutral-400">
             At Devon Technology, we are proud to have empowered over 20 organizations across Nigeria. Our innovative software solutions have successfully addressed critical social issues, fostering collaboration and efficiency.
           </p>
         </div>
 
-        <div className="col-span-5 col-start-2 flex items-center justify-start gap-10 h-fit">
+        <div className="col-span-full md:col-span-5 col-start-1 md:col-start-2 flex items-center justify-between md:justify-start gap-5 md:gap-10 w-full md:w-auto h-fit">
           {stats.map((stat, index) => (
             <Fragment key={stat.id}>
               <StatsDisplay stat={stat} />
@@ -49,7 +38,7 @@ const OurImpact = () => {
           ))}
         </div>
 
-        <div className="col-span-4 col-start-8 row-span-4 row-start-1 h-full rounded-xl overflow-hidden">
+        <div className="hidden md:block col-span-4 col-start-8 row-span-4 row-start-1 h-full rounded-xl overflow-hidden">
           <Image
             src={map}
             alt="An image of a boy texting"
@@ -60,11 +49,24 @@ const OurImpact = () => {
         </div>
 
         {/* pattern design */}
-        <div className="bg-[url('/svg/devon-logo-digital-asset.svg')] bg-left-top bg-no-repeat w-full h-24 absolute bottom-0 left-0 -scale-y-100" />
+        <div className="hidden md:block bg-[url('/svg/devon-logo-digital-asset.svg')] bg-left-top bg-no-repeat w-full h-24 absolute bottom-0 left-0 -scale-y-100" />
       </div>
     </div>
   );
 };
+
+const stats = [
+  {
+    id: 1,
+    text: "95%",
+    description: "Client satisfaction rate based on feedback surveys.",
+  },
+  {
+    id: 2,
+    text: "100",
+    description: "Successful project completed in the last year.",
+  },
+];
 
 export default OurImpact;
 
