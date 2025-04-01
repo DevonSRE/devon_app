@@ -13,7 +13,7 @@ import devonPatterns from "/public/svg/devon-d-digital-asset-outline.svg";
 const BoardMembers = () => {
   return (
     <div className="bg-neutral-100 overflow-hidden">
-      <div className="relative max-w-screen-xl mx-auto grid grid-cols-12 gap-8 gap-x-10 py-32">
+      <div className="relative max-w-screen-sm md:max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 gap-x-5 md:gap-x-10 py-24 md:py-32 px-5 md:px-0">
         {/* patterns top right */}
         <Image
           src={devonPatterns}
@@ -31,15 +31,15 @@ const BoardMembers = () => {
           className="absolute -bottom-72 -left-96 opacity-15 object-contain object-center -scale-x-100 scale-y-100"
         />
 
-        <div className="col-start-2 col-span-full">
+        <div className="col-start-1 md:col-start-2 col-span-full">
           <SectionTag color="green" text="Meet the Backbone of the Team" />
         </div>
 
-        <div className="col-span-4 col-start-2">
-          <SectionTitle className="text-4xl">The Board</SectionTitle>
+        <div className="col-span-full md:col-span-4 col-start-1 md:col-start-2">
+          <SectionTitle className="text-2xl md:text-4xl">The Board</SectionTitle>
         </div>
 
-        <div className="col-start-2 col-end-12 flex items-start justify-center gap-4 w-full">
+        <div className="col-start-1 md:col-start-2 col-end-2 md:col-end-12 flex flex-col md:flex-row items-center md:items-start justify-center gap-2 md:gap-4 w-full">
           {teamMembers.map((member) => (
             <div key={member.id} className="flex flex-col gap-4">
               <div className="h-80 w-80 bg-neutral-200 grid place-content-center rounded-xl overflow-hidden">

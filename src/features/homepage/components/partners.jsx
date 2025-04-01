@@ -10,7 +10,7 @@ import budeshi from "/public/svg/devon-partner-budeshi.svg";
 
 const Partners = () => {
   return (
-    <div className="py-4 px-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 w-full bg-white">
+    <div className="py-4 px-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-8 md:gap-y-4 w-full bg-white">
       {partners.map((partner, index) => (
         <Fragment key={partner.id}>
           <Image
@@ -20,7 +20,7 @@ const Partners = () => {
             width={400}
             className="object-contain object-center size-fit"
           />
-          {index + 1 < partners.length && (<Separator orientation="vertical" className="h-8" />)}
+          {index + 1 < partners.length && (<Separator orientation="vertical" className="h-4 md:h-8" />)}
         </Fragment>
       ))}
     </div>
