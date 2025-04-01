@@ -1,3 +1,6 @@
+'use client';
+
+
 import { Countdown } from "@/components/countdown";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
