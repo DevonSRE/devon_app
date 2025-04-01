@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Products = () => {
   return (
-    <div className="bg-white size-full py-28 px-7 grid grid-cols-12 gap-12">
+    <div className="bg-white size-full py-28 px-5 md:px-7 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
       {products.map((product, index) => (
         <Product key={product.id} {...product} isReversed={index % 2 !== 0} />
       ))}
@@ -21,11 +21,11 @@ const Products = () => {
 
 const Product = ({ isReversed = false, ...product }) => {
   return (
-    <div className="bg-neutral-100 rounded-lg h-full w-full col-span-full grid grid-cols-12 gap-12 py-16 px-12 overflow-hidden">
-      <div className={cn("col-span-7 rounded-lg h-96 relative", product.bgColor, {
-        "col-start-6": isReversed,
+    <div className="bg-neutral-100 rounded-lg h-full w-full col-span-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-8 md:py-16 px-6 md:px-12 overflow-hidden">
+      <div className={cn("col-span-full md:col-span-7 rounded-lg h-80 md:h-96 relative", product.bgColor, {
+        "col-start-1 md:col-start-6": isReversed,
       })}>
-        <p className="absolute top-10 left-10 font-semibold text-2xl text-white">{product.name}</p>
+        <p className="absolute top-10 left-10 font-semibold text-lg md:text-2xl text-white">{product.name}</p>
         <Image
           src={product.banner}
           alt={product.name}
@@ -35,11 +35,11 @@ const Product = ({ isReversed = false, ...product }) => {
         />
       </div>
 
-      <div className={cn("relative space-y-5 col-span-5", {
-        "col-start-1 row-start-1": isReversed,
+      <div className={cn("relative space-y-2.5 md:space-y-5 col-span-full md:col-span-5", {
+        "col-start-1 md:row-start-1": isReversed,
       })}>
-        <p className="text-3xl font-bold">{product.name}</p>
-        <p className="text-sm font-light">{product.description}</p>
+        <p className="text-xl md:text-3xl font-bold">{product.name}</p>
+        <p className="text-xs md:text-sm font-light">{product.description}</p>
         <Link
           href={product.link}
           className={cn(

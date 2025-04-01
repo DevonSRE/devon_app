@@ -10,7 +10,7 @@ import devonPatterns from "/public/svg/devon-d-digital-asset-outline.svg";
 const ChooseUs = () => {
   return (
     <div className="overflow-hidden">
-      <div className="relative max-w-screen-xl mx-auto grid grid-cols-12 gap-8 gap-x-10 py-60">
+      <div className="relative max-w-screen-sm md:max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 gap-x-5 md:gap-x-10 py-28 md:py-60 px-5 md:px-0">
         {/* patterns top right */}
         <Image
           src={devonPatterns}
@@ -27,14 +27,14 @@ const ChooseUs = () => {
           width={700}
           className="absolute -bottom-72 -left-96 opacity-15 object-contain object-center -scale-x-100 scale-y-100"
         />
-        <div className="col-start-2 col-end-12 grid grid-cols-12 gap-12">
-          <div className="h-48 w-72 max-w-full col-span-4">
-            <SectionTitle className="mb-2.5 text-4xl">Why Choose Us</SectionTitle>
-            <p className="font-light">We understand the unique challenges of the legal sector. We are commited to empowering legal professionals to do their best work.</p>
+        <div className="col-start-1 md:col-start-2 col-end-2 md:col-end-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
+          <div className="h-full md:h-48 w-full md:w-72 max-w-full col-span-full md:col-span-4">
+            <SectionTitle className="mb-2.5 text-2xl md:text-4xl">Why Choose Us</SectionTitle>
+            <p className="font-light text-sm md:text-base">We understand the unique challenges of the legal sector. We are commited to empowering legal professionals to do their best work.</p>
           </div>
 
           {reasons.map((reason) => (
-            <TiltingCard key={reason.id} {...reason} className="col-span-4" />
+            <TiltingCard key={reason.id} {...reason} className="col-span-full md:col-span-4" />
           ))}
         </div>
       </div>
@@ -53,7 +53,7 @@ const TiltingCard = ({ className, icon, heading, body }) => {
       initial="initial"
       whileHover="animate"
       className={cn(
-        "relative group p-5 pt-0 h-48 w-80 max-w-full bg-neutral-100 hover:bg-devon-green hover:text-white rounded-xl duration-500 ease-out transition-colors space-y-2",
+        "relative group p-5 pt-0 h-fit md:h-48 w-full md:w-80 max-w-full bg-neutral-100 hover:bg-devon-green hover:text-white rounded-xl duration-500 ease-out transition-colors space-y-1 md:space-y-2",
         className,
       )}>
       <div className="relative bg-white/40 w-10 h-12 p-1 text-devon-green group-hover:text-white group-hover:bg-neutral-100/20 rounded-br-xl">

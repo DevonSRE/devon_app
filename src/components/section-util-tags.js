@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 const SectionTitle = ({ children, className }) => {
   return (
-    <h1 className={cn("font-bold text-5xl", className)}>
+    <h1 className={cn("font-bold text-3xl md:text-5xl", className)}>
       {children}
     </h1>
   );
@@ -47,7 +47,7 @@ const SectionTag = ({ color, text, className }) => {
   return (
     <div className={cn(color ? colorVariants[color].outline : colorVariants['gray'].outline)}>
       <div className={cn(
-        "py-1.5 px-4 rounded-md text-sm w-fit",
+        "py-1.5 px-2 md:px-4 rounded-md text-xs md:text-sm w-fit whitespace-nowrap",
         color ? colorVariants[color].main : colorVariants["gray"].main,
         className,
       )}>

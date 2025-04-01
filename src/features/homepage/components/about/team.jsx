@@ -25,7 +25,7 @@ const Team = () => {
 
   return (
     <div className="overflow-hidden">
-      <div className="relative max-w-screen-xl mx-auto grid grid-cols-12 gap-8 gap-x-10 py-32">
+      <div className="relative max-w-screen-sm md:max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 gap-x-5 md:gap-x-10 py-24 md:py-32 px-5 md:px-0">
         {/* patterns top right */}
         <Image
           src={devonPatterns}
@@ -43,52 +43,50 @@ const Team = () => {
           className="absolute -bottom-72 -left-96 opacity-15 object-contain object-center -scale-x-100 scale-y-100"
         />
 
-        <div className="col-start-2 col-span-full">
+        <div className="col-start-1 md:col-start-2 col-span-full">
           <SectionTag color="green" text="Meet The Team" />
         </div>
 
-        <div className="col-span-4 col-start-2">
-          <SectionTitle className="text-4xl">The Team</SectionTitle>
+        <div className="col-span-full md:col-span-4 col-start-1 md:col-start-2">
+          <SectionTitle className="text-2xl md:text-4xl">The Team</SectionTitle>
         </div>
 
-        <div className="col-start-2 col-end-12 grid grid-cols-9 gap-20 h-[460px] w-full">
-          <div className="bg-gray-200 col-span-4 rounded-3xl overflow-hidden">
+        <div className="col-start-1 md:col-start-2 col-end-2 md:col-end-12 grid grid-cols-1 md:grid-cols-9 gap-10 md:gap-20 h-[460px] w-full">
+          <div className="bg-gray-200 col-span-full md:col-span-4 rounded-3xl overflow-hidden">
             <Image
               src={activeMember.imageUrl}
               alt={activeMember.name}
               height={500}
               width={400}
-              className="object-cover object-center size-full"
+              className="object-cover object-top md:object-center size-full"
             />
           </div>
 
-          <div className="col-start-5 col-span-5 overflow-auto">
+          <div className="col-start-1 md:col-start-5 col-span-full md:col-span-5 overflow-auto">
             {teamMembers.map((member) => {
               const isSelected = activeMember.id === member.id;
-              return (
-                <div
-                  key={member.id}
-                  className={cn("hover:cursor-pointer flex justify-between px-10 py-8 first:border-t border-b border-black", {
-                    "text-green-500 border-b-green-500": isSelected,
-                  })}
-                  onClick={() => setActiveMember(member)}
-                >
-                  <span className="font-semibold">{member.name}</span>
-                  <span className="font-light">{member.role}</span>
-                  <div className="flex items-center gap-2">
-                    {member.socials.map((social) => (
-                      <Link
-                        key={social.id}
-                        href={social.link}
-                        target="_blank"
-                        className={cn("text-inherit p-1 rounded", {
-                          "bg-green-500 text-white": isSelected,
-                        })}
-                      >{social.icon}</Link>
-                    ))}
-                  </div>
+              return (<div
+                key={member.id}
+                className={cn("hover:cursor-pointer flex justify-between px-5 md:px-10 py-4 md:py-8 first:border-t border-b border-black", {
+                  "text-green-500 border-b-green-500": isSelected,
+                })}
+                onClick={() => setActiveMember(member)}
+              >
+                <span className="font-semibold">{member.name}</span>
+                <span className="font-light text-center md:text-start">{member.role}</span>
+                <div className="flex items-center gap-1 md:gap-2">
+                  {member.socials.map((social) => (
+                    <Link
+                      key={social.id}
+                      href={social.link}
+                      target="_blank"
+                      className={cn("text-inherit p-1 rounded", {
+                        "bg-green-500 text-white": isSelected,
+                      })}
+                    >{social.icon}</Link>
+                  ))}
                 </div>
-              )
+              </div>)
             })}
           </div>
         </div>

@@ -5,11 +5,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const VisionMission = () => {
   return (
     <div className="bg-neutral-100">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-12 gap-8 py-32">
-        <Card className="relative overflow-hidden border-none col-start-2 col-span-5 row-span-2 p-8 shadow-none">
+      <div className="max-w-screen-sm md:max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-24 md:py-32 px-5 md:px-0">
+        <Card className="relative overflow-hidden border-none col-start-1 md:col-start-2 col-span-full md:col-span-5 md:row-span-2 p-4 md:p-8 shadow-none">
           <CardHeader>
             <CardTitle>
-              <SectionTitle className="text-4xl text-green-500">Mission Statement</SectionTitle>
+              <SectionTitle className="text-2xl md:text-4xl text-green-500">Mission Statement</SectionTitle>
             </CardTitle>
           </CardHeader>
 
@@ -24,10 +24,10 @@ const VisionMission = () => {
           <p className="absolute -bottom-72 -right-5 font-bold text-[420px] text-green-500/10">M</p>
         </Card>
 
-        <Card className="relative overflow-hidden border-none col-start-7 col-end-12 p-8 shadow-none">
+        <Card className="relative overflow-hidden border-none col-start-1 md:col-start-7 col-end-2 md:col-end-12 p-4 md:p-8 shadow-none">
           <CardHeader>
             <CardTitle>
-              <SectionTitle className="text-4xl text-devon-purple">Vision Statement</SectionTitle>
+              <SectionTitle className="text-2xl md:text-4xl text-devon-purple">Vision Statement</SectionTitle>
             </CardTitle>
           </CardHeader>
 
@@ -38,10 +38,10 @@ const VisionMission = () => {
           <p className="absolute -bottom-72 -right-5 font-bold text-[420px] text-devon-purple/10">V</p>
         </Card>
 
-        <Card className="relative overflow-hidden border-none col-start-7 col-end-12 p-8 shadow-none">
+        <Card className="relative overflow-hidden border-none col-start-1 md:col-start-7 col-end-2 md:col-end-12 p-4 md:p-8 shadow-none">
           <CardHeader>
             <CardTitle>
-              <SectionTitle className="text-4xl text-devon-indigo">The Goal</SectionTitle>
+              <SectionTitle className="text-2xl md:text-4xl text-devon-indigo">The Goal</SectionTitle>
             </CardTitle>
           </CardHeader>
 
