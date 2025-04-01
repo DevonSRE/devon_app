@@ -1,6 +1,5 @@
 import { Geist, Lexend } from "next/font/google";
 import "./globals.css";
-import Navbar from "./component/Navbar";
 import { Toaster } from "@/components/ui/sonner"
 
 
@@ -24,9 +23,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${lexend.variable} ${geistSans.variable} antialiased`}>
-        <header>
-          <Navbar/>
-        </header>
         {children}
 
         <Toaster richColors />
