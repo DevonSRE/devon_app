@@ -11,7 +11,7 @@ const Announcement = () => {
 
       <div className="flex items-center gap-4">
         <div>
-          <Countdown targetDate="2025-04-16" />
+          <Countdown targetDate="2025-04-16T23:59:59" />
         </div>
 
         <Separator orientation="vertical" className="h-12" />

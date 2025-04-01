@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 
 const Countdown = ({ targetDate, onComplete }) => {
   // Parse the target date, defaulting time to midnight if only date is provided
-  const targetTime = new Date(targetDate.includes("T") ? targetDate : `${targetDate}T00:00:00`).getTime();
+  const targetTime = new Date(targetDate.includes("T") ? targetDate : `${targetDate}T23:59:59`).getTime();
   const startTime = new Date().getTime();
   const totalDuration = targetTime - startTime; // Total countdown duration in ms
 
