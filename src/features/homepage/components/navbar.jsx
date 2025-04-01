@@ -5,36 +5,43 @@ import { NavbarItems } from "./navbar-items";
 import devonLogo from "/public/svg/devon-logo.svg";
 import { cn } from "@/lib/utils";
 
+import {
+  NavigationMenu,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 bg-white z-50">
-      <div className="relative size-full flex items-center justify-between px-24 py-4 bg-white after:absolute after:bg-[url('/svg/devon-brand-patterns.svg')] after:w-full after:h-1 after:left-0 after:bottom-0 after:z-0">
-        <div>
-          {navbarItems.map((item) => (
-            <div key={item.id}>
-              {item.category === "logo" && (
-                <Link href={item.url}>
-                  <Image src={devonLogo} alt="A logo of Devon" />
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
+    <NavigationMenu className="bg-white z-50  w-full max-w-full">
+      <header className="sticky top-0 bg-white z-50 w-full">
+        <div className="relative size-full flex items-center justify-between px-24 py-4 bg-white after:absolute after:bg-[url('/svg/devon-brand-patterns.svg')] after:w-full after:h-1 after:left-0 after:bottom-0 after:z-0">
+          <div>
+            {navbarItems.map((item) => (
+              <div key={item.id}>
+                {item.category === "logo" && (
+                  <Link href={item.url}>
+                    <Image src={devonLogo} alt="A logo of Devon" />
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
 
-        <NavbarItems navItems={navbarItems} />
+          <NavbarItems navItems={navbarItems} />
 
-        <div>
-          {navbarItems.map((item) => (
-            <div key={item.id}>
-              {item.category === 'cta' && (
-                <Link href="/contact-us" className={cn(buttonVariants({ size: "lg" }))}>{item.value}</Link>
-              )}
-            </div>
-          ))}
+          <div>
+            {navbarItems.map((item) => (
+              <div key={item.id}>
+                {item.category === 'cta' && (
+                  <Link href="/contact-us" className={cn(buttonVariants({ size: "lg" }))}>{item.value}</Link>
+                )}
+              </div>
+            ))}
+          </div>
+          <NavigationMenuViewport />
         </div>
-      </div>
-    </header>
+      </header>
+    </NavigationMenu>
   );
 }
 
