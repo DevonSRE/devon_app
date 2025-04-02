@@ -7,7 +7,7 @@ import facebook from "/public/svg/Facebook.svg"
 import instagram from "/public/svg/Instagram.svg"
 import x from "/public/svg/X.svg"
 import linkedin from "/public/svg/LinkedIn.svg"
-import youtube from "/public/svg/Youtube.svg"
+// import youtube from "/public/svg/Youtube.svg"
 import { LocateFixedIcon, MailIcon, PhoneCallIcon } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
@@ -36,7 +36,7 @@ const Footer = () => {
 
             <div className="flex gap-2.5 md:gap-1 items-center">
               {socials.map((social) => (
-                <Link key={social.id} href={social.url} className="w-6 h-6">
+                <Link key={social.id} href={social.url} target="_blank" className="w-6 h-6">
                   <Image
                     src={social.icon}
                     alt={social.name}
@@ -87,11 +87,10 @@ const links = [
   // { id: 5, name: "Contact Us", url: "/contact-us", },
 ];
 const socials = [
-  { id: 1, name: "Facebook", url: "/", icon: facebook },
-  { id: 2, name: "Instagram", url: "/", icon: instagram },
-  { id: 3, name: "X", url: "/", icon: x },
-  { id: 4, name: "LinkedIn", url: "/", icon: linkedin },
-  { id: 5, name: "YouTube", url: "/", icon: youtube },
+  { id: 1, name: "Facebook", url: "https://www.facebook.com/share/1BPLqp3CbU/?mibextid=wwXIfr", icon: facebook },
+  { id: 2, name: "Instagram", url: "https://www.instagram.com/devon_technologies_ltd?igsh=MXQxczNsMXJ6b29iYQ==", icon: instagram },
+  { id: 3, name: "X", url: "https://x.com/DevonTechio", icon: x },
+  { id: 4, name: "LinkedIn", url: "https://www.linkedin.com/company/devon-technologies-ltd/about/?viewAsMember=true", icon: linkedin },
 ];
 
 export default Footer
