@@ -83,8 +83,8 @@ const links = [
   { id: 1, name: "Our Solutions", url: "/solutions", },
   { id: 2, name: "Explore", url: "/solutions", },
   { id: 3, name: "About Us", url: "/about", },
-  { id: 4, name: "Contact Us", url: "/contact-us", },
-  { id: 5, name: "Get Started", url: "/contact-us", },
+  { id: 4, name: "Get Started", url: "/contact-us", },
+  // { id: 5, name: "Contact Us", url: "/contact-us", },
 ];
 const socials = [
   { id: 1, name: "Facebook", url: "/", icon: facebook },

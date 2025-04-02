@@ -84,7 +84,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Mrs. Lucy James",
+    name: "Mrs. Lucy James Abagi",
     role: "C.E.O PPDC",
     imageUrl: "",
   },

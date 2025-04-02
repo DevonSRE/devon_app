@@ -1,12 +1,14 @@
 import Image from "next/image";
 // import Link from "next/link";
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 import aboutOne from "/public/images/devon-about-1.png";
 import aboutTwo from "/public/images/devon-about-2.png";
 import aboutThree from "/public/images/devon-about-3.png";
 import aboutFour from "/public/images/devon-about-wide.png";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const AboutUs = ({ showButtons = true, tagColor = "purple" }) => {
   return (
@@ -43,15 +45,16 @@ const AboutUs = ({ showButtons = true, tagColor = "purple" }) => {
 
       {showButtons && (
         <div className="col-span-full col-start-1 md:col-start-2 font-light flex gap-2.5 md:gap-5 items-center">
-          <Button className="bg-devon-purple hover:bg-devon-purple/85" size="lg">
+          <Link href="/about" className={cn(buttonVariants({ size: "lg" }), "bg-devon-purple hover:bg-devon-purple/85")}>
             Learn More
-          </Button>
+          </Link>
 
-          <Button variant="outline" size="lg" className="ring-neutral-800 ring-2">
+          <Link href="/contact-us" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "ring-neutral-800 ring-2")}>
             Partner With Us
-          </Button>
+          </Link>
         </div>
-      )}
+      )
+      }
 
       <div className="col-span-full col-start-1 md:col-start-2 col-end-2 md:col-end-12 grid grid-cols-2 md:grid-cols-8 grid-rows-2 gap-2.5 md:gap-5">
         <div className="col-span-1 md:col-span-3 bg-neutral-100 h-44 w-full rounded-md overflow-hidden">
@@ -91,7 +94,7 @@ const AboutUs = ({ showButtons = true, tagColor = "purple" }) => {
           />
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

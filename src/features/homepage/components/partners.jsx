@@ -6,7 +6,7 @@ import ppdc from "/public/svg/devon-partner-ppdc.svg";
 import devend from "/public/svg/devon-partner-devend.svg";
 import macarth from "/public/svg/devon-partner-macarth.svg";
 import usdos from "/public/svg/devon-partner-usdos.svg";
-import budeshi from "/public/svg/devon-partner-budeshi.svg";
+// import budeshi from "/public/svg/devon-partner-budeshi.svg";
 
 const Partners = () => {
   return (
@@ -33,7 +33,7 @@ const partners = [
   { id: 2, name: "devend", logo: devend, },
   { id: 3, name: "macarthur", logo: macarth, },
   { id: 4, name: "usdos", logo: usdos, },
-  { id: 5, name: "budeshi", logo: budeshi, },
+  // { id: 5, name: "budeshi", logo: budeshi, },
 ];
 
 

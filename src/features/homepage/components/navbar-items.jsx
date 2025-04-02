@@ -25,31 +25,29 @@ export function NavbarItems({ navItems }) {
   const pathname = usePathname();
 
   return (
-    <>
-      <nav className="flex items-center justify-between gap-4">
-        <NavLinks isOpen={navbarOpen} setIsOpen={setNavbarOpen} navItems={navItems} pathname={pathname} />
+    <nav className="flex items-center justify-between gap-4">
+      <NavLinks isOpen={navbarOpen} setIsOpen={setNavbarOpen} navItems={navItems} pathname={pathname} />
 
-        <div className="hidden md:block">
-          <ExploreNavMenu />
-        </div>
+      <div className="hidden md:block">
+        <ExploreNavMenu />
+      </div>
 
-        <div className="menu-bar lg:hidden">
-          <Button
-            variant={'ghost'}
-            size={'icon'}
-            className={cn(
-              "h-8 w-8 [&_svg]:size-5",
-              { "text-black hover:bg-black/10": navbarOpen, "hover:bg-black/15 text-black": !navbarOpen },
-            )}
-            onClick={() => setNavbarOpen((prev) => !prev)}
-          >
-            {navbarOpen
-              ? <XIcon />
-              : <MenuIcon />}
-          </Button>
-        </div>
-      </nav>
-    </>
+      <div className="menu-bar lg:hidden">
+        <Button
+          variant={'ghost'}
+          size={'icon'}
+          className={cn(
+            "h-8 w-8 [&_svg]:size-5",
+            { "text-black hover:bg-black/10": navbarOpen, "hover:bg-black/15 text-black": !navbarOpen },
+          )}
+          onClick={() => setNavbarOpen((prev) => !prev)}
+        >
+          {navbarOpen
+            ? <XIcon />
+            : <MenuIcon />}
+        </Button>
+      </div>
+    </nav>
   );
 }
 

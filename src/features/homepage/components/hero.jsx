@@ -28,7 +28,7 @@ const Hero = () => {
                     Explore Our Solutions
                   </Button>
                 </Link>
-                <Link href='/contact'>
+                <Link href='/contact-us'>
                   <Button variant={'secondary'}>
                     Partner With Us
                   </Button>

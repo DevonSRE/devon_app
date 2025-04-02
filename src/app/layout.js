@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body className={`${lexend.variable} ${geistSans.variable} antialiased`}>
         {children}
 
-        <Toaster richColors />
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );

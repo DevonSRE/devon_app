@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 import judicAiProduct from "/public/svg/devon-judicai-product.svg"
 import docketmasterProduct from "/public/svg/devon-docketmaster-product.svg"
-import lawkonnectProduct from "/public/svg/devon-lawkonnect-product.svg"
+// import lawkonnectProduct from "/public/svg/devon-lawkonnect-product.svg"
 import Link from "next/link";
 
 
@@ -31,9 +31,9 @@ const Projects = () => {
         </div>
 
         <div className="col-span-full md:col-span-4 col-start-1 md:col-start-2 mt-4">
-          <Button variant="secondary" className="text-white bg-neutral-500" size="lg">
+          <Link href="/solutions" className={cn(buttonVariants({ variant: "secondary", size: "lg" }), "text-white bg-neutral-500")}>
             Learn More
-          </Button>
+          </Link>
         </div>
 
         <div className="col-span-full md:col-span-5 col-start-1 md:col-start-6 col-end-2 md:col-end-12 h-full md:row-start-1 md:row-end-7 w-full flex flex-col gap-5">
@@ -73,7 +73,7 @@ const projects = [
       </div>
     ), bgColor: "bg-devon-docketmaster", textColor: "text-[#FCFFBE]",
   },
-  {
+  /*{
     id: 3, title: "LawKonnect", img: (
       <div className="absolute -bottom-5 mdrbottom-0 -right-28 md:right-0 w-80 md:w-full h-full">
         <Image
@@ -85,7 +85,7 @@ const projects = [
         />
       </div>
     ), bgColor: "bg-devon-lawkonnect", textColor: "text-white",
-  },
+  },*/
 ];
 
 export default Projects;
