@@ -19,7 +19,7 @@ const Announcement = () => {
 
         <Separator orientation="vertical" className="hidden md:block h-12" />
 
-        <Link href={'https://www.lsp.devontech.io/events'} target="_blank" className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-green-500 hover:bg-green-600",)}>Register Now</Link>
+        <Link href={'https://www.lsp.devontech.io/events/jitsummit'} target="_blank" className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-green-500 hover:bg-green-600",)}>Register Now</Link>
       </div>
     </div>
   );
