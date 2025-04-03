@@ -36,7 +36,7 @@ const Projects = () => {
           </Link>
         </div>
 
-        <div className="col-span-full md:col-span-5 col-start-1 md:col-start-6 col-end-2 md:col-end-12 h-full md:row-start-1 md:row-end-7 w-full flex flex-col gap-5">
+        <div className="col-span-full md:col-span-5 col-start-1 md:col-start-6 col-end-2 md:col-end-12 h-full md:row-start-1 md:row-end-7 w-full flex flex-col justify-center items-center gap-5">
           {projects.map((project) => (
             <ProductCard key={project.id} {...project} />
           ))}
@@ -49,7 +49,7 @@ const Projects = () => {
 const projects = [
   {
     id: 1, title: "Judic AI", img: (
-      <div className="absolute -bottom-5 md:bottom-0 -right-28 md:right-0 w-80 md:w-full h-full">
+      <div className="absolute -bottom-5 md:-bottom-8 lg:-bottom-6 xl:-bottom-2 -right-28 md:right-0 w-80 md:w-full h-full">
         <Image
           src={judicAiProduct}
           alt="judic ai"
@@ -62,7 +62,7 @@ const projects = [
   },
   {
     id: 2, title: "DocketMaster", img: (
-      <div className="absolute -bottom-5 md:bottom-0 -right-28 md:right-0 w-80 md:w-full h-full">
+      <div className="absolute -bottom-5 md:-bottom-8 lg:-bottom-1 xl:-bottom-2 -right-28 md:right-0 w-80 md:w-full h-full">
         <Image
           src={docketmasterProduct}
           alt="docketmaster"
@@ -93,8 +93,8 @@ export default Projects;
 
 const ProductCard = ({ title, img, bgColor, textColor }) => {
   return (
-    <Link className="size-full" href="/solutions">
-      <div className={cn("h-36 md:h-full w-full max-h-48 rounded-md flex items-center gap-2.5 md:gap-5 pl-10 overflow-hidden", bgColor)}>
+    <Link className="h-full md:h-48 w-full" href="/solutions">
+      <div className={cn("h-36 md:h-full w-full max-h-full rounded-md flex items-center gap-2.5 md:gap-5 pl-10 overflow-hidden", bgColor)}>
         <p className={cn("whitespace-nowrap", textColor)}>{title}</p>
         <div className="h-full w-full relative">
           {img}
