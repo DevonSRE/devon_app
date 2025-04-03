@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import judicaiBanner from "/public/svg/devon-judicai-banner.svg";
 import docketmasterBanner from "/public/svg/devon-docketmaster-banner.svg";
-import lawkonnectBanner from "/public/svg/devon-lawkonnect-banner.svg";
+// import lawkonnectBanner from "/public/svg/devon-lawkonnect-banner.svg";
 import Image from "next/image";
 
 
@@ -57,9 +57,9 @@ const Product = ({ isReversed = false, ...product }) => {
 };
 
 const products = [
-  { id: "01", name: "Judic AI", logo: "", banner: judicaiBanner, description: "An independent court proceeding recorder, transcriber and case management system. Judic AI is a cutting-edge legal speech processing platform designed to streamline and optimize the workflows of judges, clerks, lawyers, and legal aides. Optimized with Virtual Hearing Capability.", link: "", bgColor: "bg-devon-green", },
-  { id: "02", name: "Docket Master", logo: "", banner: docketmasterBanner, description: "Our advanced E-Filing Management System empowers legal practitioners to seamlessly file and manage cases with ease. Designed with legal practitioners in mind.", link: "", bgColor: "bg-devon-docketmaster", },
-  { id: "03", name: "LawKonnect", logo: "", banner: lawkonnectBanner, description: "A virtual law firm app, connecting citizens to legal services in a more convenient and affordable way and legal professionals and citizens to continuing legal education pro-bono services.", link: "", bgColor: "bg-devon-lawkonnect", },
+  { id: "01", name: "Judic AI", logo: "", banner: judicaiBanner, description: "An independent court proceeding recorder, transcriber and case management system. Judic AI is a cutting-edge legal speech processing platform designed to streamline and optimize the workflows of judges, clerks, lawyers, and legal aides. Optimized with Virtual Hearing Capability.", link: "https://www.lsp.devontech.io/", bgColor: "bg-devon-green", },
+  { id: "02", name: "Docket Master", logo: "", banner: docketmasterBanner, description: "Our advanced E-Filing Management System empowers legal practitioners to seamlessly file and manage cases with ease. Designed with legal practitioners in mind.", link: "https://staging.efiling.devontech.io/", bgColor: "bg-devon-docketmaster", },
+  // { id: "03", name: "LawKonnect", logo: "", banner: lawkonnectBanner, description: "A virtual law firm app, connecting citizens to legal services in a more convenient and affordable way and legal professionals and citizens to continuing legal education pro-bono services.", link: "", bgColor: "bg-devon-lawkonnect", },
 ];
 
 

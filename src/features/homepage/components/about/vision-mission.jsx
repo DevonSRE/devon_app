@@ -14,10 +14,6 @@ const VisionMission = () => {
           </CardHeader>
 
           <CardContent className="font-light text-sm text-gray-500">
-            <p>To collaborate with the Justice sector actors to build an operationalised tech-driven ecosystem that makes legal services and court processes more transparent, affordable, efficient, and convenient in a manner that improves access to justice and quick and just dispensation of justice.</p>
-
-            <br />
-
             <p>To collaborate with the Justice sector stakeholder in building an operationalised tech-driven ecosystem that makes legal services and court processes more transparent, affordable, efficient, and convenient in a manner that improves access to justice and quick and just dispensation of justice.</p>
           </CardContent>
 

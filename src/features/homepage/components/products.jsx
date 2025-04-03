@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 import judicAiProduct from "/public/svg/devon-judicai-product.svg"
 import docketmasterProduct from "/public/svg/devon-docketmaster-product.svg"
-import lawkonnectProduct from "/public/svg/devon-lawkonnect-product.svg"
+// import lawkonnectProduct from "/public/svg/devon-lawkonnect-product.svg"
 import Link from "next/link";
 
 
@@ -31,12 +31,12 @@ const Projects = () => {
         </div>
 
         <div className="col-span-full md:col-span-4 col-start-1 md:col-start-2 mt-4">
-          <Button variant="secondary" className="text-white bg-neutral-500" size="lg">
+          <Link href="/solutions" className={cn(buttonVariants({ variant: "secondary", size: "lg" }), "text-white bg-neutral-500")}>
             Learn More
-          </Button>
+          </Link>
         </div>
 
-        <div className="col-span-full md:col-span-5 col-start-1 md:col-start-6 col-end-2 md:col-end-12 h-full md:row-start-1 md:row-end-7 w-full flex flex-col gap-5">
+        <div className="col-span-full md:col-span-5 col-start-1 md:col-start-6 col-end-2 md:col-end-12 h-full md:row-start-1 md:row-end-7 w-full flex flex-col justify-center items-center gap-5">
           {projects.map((project) => (
             <ProductCard key={project.id} {...project} />
           ))}
@@ -49,7 +49,7 @@ const Projects = () => {
 const projects = [
   {
     id: 1, title: "Judic AI", img: (
-      <div className="absolute -bottom-5 md:bottom-0 -right-28 md:right-0 w-80 md:w-full h-full">
+      <div className="absolute -bottom-5 md:-bottom-8 lg:-bottom-6 xl:-bottom-2 -right-28 md:right-0 w-80 md:w-full h-full">
         <Image
           src={judicAiProduct}
           alt="judic ai"
@@ -62,7 +62,7 @@ const projects = [
   },
   {
     id: 2, title: "DocketMaster", img: (
-      <div className="absolute -bottom-5 md:bottom-0 -right-28 md:right-0 w-80 md:w-full h-full">
+      <div className="absolute -bottom-5 md:-bottom-8 lg:-bottom-1 xl:-bottom-2 -right-28 md:right-0 w-80 md:w-full h-full">
         <Image
           src={docketmasterProduct}
           alt="docketmaster"
@@ -73,7 +73,7 @@ const projects = [
       </div>
     ), bgColor: "bg-devon-docketmaster", textColor: "text-[#FCFFBE]",
   },
-  {
+  /*{
     id: 3, title: "LawKonnect", img: (
       <div className="absolute -bottom-5 mdrbottom-0 -right-28 md:right-0 w-80 md:w-full h-full">
         <Image
@@ -85,7 +85,7 @@ const projects = [
         />
       </div>
     ), bgColor: "bg-devon-lawkonnect", textColor: "text-white",
-  },
+  },*/
 ];
 
 export default Projects;
@@ -93,8 +93,8 @@ export default Projects;
 
 const ProductCard = ({ title, img, bgColor, textColor }) => {
   return (
-    <Link className="size-full" href="/solutions">
-      <div className={cn("h-36 md:h-full w-full max-h-48 rounded-md flex items-center gap-2.5 md:gap-5 pl-10 overflow-hidden", bgColor)}>
+    <Link className="h-full md:h-48 w-full" href="/solutions">
+      <div className={cn("h-36 md:h-full w-full max-h-full rounded-md flex items-center gap-2.5 md:gap-5 pl-10 overflow-hidden", bgColor)}>
         <p className={cn("whitespace-nowrap", textColor)}>{title}</p>
         <div className="h-full w-full relative">
           {img}

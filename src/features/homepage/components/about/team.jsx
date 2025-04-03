@@ -67,7 +67,7 @@ const Team = () => {
               const isSelected = activeMember.id === member.id;
               return (<div
                 key={member.id}
-                className={cn("hover:cursor-pointer flex justify-between px-5 md:px-10 py-4 md:py-8 first:border-t border-b border-black", {
+                className={cn("hover:cursor-pointer flex justify-between px-5 md:px-10 py-4 md:py-5 first:border-t border-b border-black text-sm", {
                   "text-green-500 border-b-green-500": isSelected,
                 })}
                 onClick={() => setActiveMember(member)}
@@ -99,7 +99,7 @@ const Team = () => {
 const teamMembers = [
   {
     id: 1,
-    name: "Bemshima",
+    name: "Bemshima Peter",
     role: "C.E.O",
     socials: [
       {
@@ -119,7 +119,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Ireoluwa",
+    name: "Ireoluwa Omojola",
     role: "Product Manager",
     socials: [
       {
@@ -139,7 +139,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Godswill",
+    name: "Godswill Nasara",
     role: "Frontend Engineer",
     socials: [
       {
@@ -159,7 +159,7 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Israel",
+    name: "Israel Adegoke",
     role: "Artificial Intelligence Engineer",
     socials: [
       {
@@ -179,7 +179,7 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: "Benjamin",
+    name: "Benjamin Benjamin",
     role: "Product Designer",
     socials: [
       {
@@ -199,8 +199,8 @@ const teamMembers = [
   },
   {
     id: 6,
-    name: "Meshach",
-    role: "Financial Manager",
+    name: "Meshach Auta Bulusson",
+    role: "Finance Manager",
     socials: [
       {
         id: 1,
@@ -219,7 +219,7 @@ const teamMembers = [
   },
   {
     id: 7,
-    name: "Vivian",
+    name: "Vivian Daniel-Nwaorisara",
     role: "Human Resource Manager",
     socials: [
       {

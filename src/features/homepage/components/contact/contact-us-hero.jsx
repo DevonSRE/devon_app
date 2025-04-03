@@ -41,7 +41,7 @@ const ContactUsHero = () => {
         />
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-10 absolute left-1/2 -translate-x-1/2 -bottom-24 md:-bottom-12">
+      <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-4 md:gap-10 absolute left-1/2 -translate-x-1/2 -bottom-24 md:-bottom-12">
         {contacts.map((contact) => (
           <ContactCard key={contact.id} {...contact} />
         ))}
