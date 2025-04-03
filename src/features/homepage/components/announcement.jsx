@@ -14,7 +14,7 @@ const Announcement = () => {
 
       <div className="flex flex-col md:flex-row items-center gap-2.5 md:gap-4">
         <div>
-          <Countdown targetDate="2025-04-17T10:00:00" />
+          <Countdown targetDate="2025-04-16T10:00:00.000Z" />
         </div>
 
         <Separator orientation="vertical" className="hidden md:block h-12" />
