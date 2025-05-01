@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
-    <div className="bg-[url('/svg/devon-bg-eclipse.svg')] md:bg-[url('/svg/devon-hero-bg.svg')] bg-neutral-950 bg-cover md:bg-contain bg-left md:bg-right bg-no-repeat w-full relative">
+    <div className="bg-[url('/svg/devon-bg-eclipse.svg')] lg:bg-[url('/svg/devon-hero-bg.svg')] bg-neutral-950 bg-cover md:bg-contain bg-left md:bg-right bg-no-repeat w-full relative">
       <div className="max-w-screen-sm sm:max-w-screen-md md:max-w-screen-xl xl:max-w-screen-2xl mx-auto min-h-[calc(100dvh-70px)] w-full text-white flex flex-col md:flex-row justify-center md:justify-start items-center">
         {/* Content Container */}
-        <div className="w-full min-h-full md:relative">
+        <div className="w-full min-h-full md:relative -translate-y-24 md:-translate-y-16 lg:-translate-y-0">
           <div className="w-full h-full">
             <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-1 px-5 md:px-0">
               <div className="col-span-full md:col-span-6 col-start-1 md:col-start-2">
@@ -41,7 +41,7 @@ const Hero = () => {
           alt="A pattern of Devon"
           width={500}
           height={500}
-          className="size-64 md:size-96 absolute bottom-0 -left-14 pointer-events-none"
+          className="size-52 md:size-96 absolute bottom-0 -left-14 pointer-events-none"
         />
       </div>
     </div>

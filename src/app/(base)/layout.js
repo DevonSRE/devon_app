@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <main className={`relative font-lexend antialiased`}>
-      <div className="min-h-16 md:min-h-[72px]">
+      <div className="min-h-16 md:min-h-fit lg:min-h-[72px]">
         <Navbar />
       </div>
 

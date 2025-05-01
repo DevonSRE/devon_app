@@ -28,7 +28,7 @@ export function NavbarItems({ navItems }) {
     <nav className="flex items-center justify-between gap-4">
       <NavLinks isOpen={navbarOpen} setIsOpen={setNavbarOpen} navItems={navItems} pathname={pathname} />
 
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <ExploreNavMenu />
       </div>
 
@@ -133,7 +133,7 @@ const exploreItems = {
 const NavLinks = ({ isOpen, setIsOpen, navItems, pathname }) => {
   return (
     <>
-      <ul className="hidden md:flex items-center justify-between gap-4">
+      <ul className="hidden lg:flex items-center justify-between gap-4">
         {navItems.map((item) => (
           <Fragment key={item.id}>
             {item.category === "links" && (
