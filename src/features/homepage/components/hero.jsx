@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="w-full h-full">
             <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-1 px-5 md:px-0">
               <div className="col-span-full md:col-span-6 col-start-1 md:col-start-2">
-                <SectionTitle className="pt-10 md:pt-20 text-center md:text-start 2xl:text-5xl">
+                <SectionTitle className="pt-10 md:pt-20 text-center lg:text-start 2xl:text-5xl">
                   Empowering <span className="text-green-500">Access to <br /> Justice</span> through Innovative Legal Solutions
                 </SectionTitle>
               </div>
