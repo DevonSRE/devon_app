@@ -45,7 +45,7 @@ const Countdown = ({ targetDate, onComplete }) => {
   return (
     <div className="flex flex-col items-center w-full max-w-md text-white rounded-lg">
       {/* Countdown Display */}
-      <div className="flex justify-center gap-4 text-base md:text-xl font-bold">
+      <div className="flex justify-center gap-2 md:gap-4 text-sm md:text-base lg:text-xl font-bold">
         {(["days", "hours", "minutes", "seconds"]).map((label) => (
           <motion.div
             key={label}
@@ -54,7 +54,7 @@ const Countdown = ({ targetDate, onComplete }) => {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-1 md:px-2 py-0.5 md:py-1 w-10 md:w-16 rounded-md flex flex-col items-center bg-neutral-950 ">
+            <div className="px-1 md:px-2 py-px md:py-1 w-10 lg:w-16 rounded-md flex flex-col items-center bg-neutral-950 ">
               <motion.span
                 key={timeLeft[label]} // Re-animates when value changes
                 className="text-lg md:text-2xl"
@@ -65,7 +65,7 @@ const Countdown = ({ targetDate, onComplete }) => {
                 {timeLeft[label]}
               </motion.span>
             </div>
-            <span className="text-xs md:text-sm capitalize text-neutral-400 font-normal">{label}</span>
+            <span className="text-[9px] md:text-xs lg:text-sm capitalize text-neutral-400 font-normal">{label}</span>
           </motion.div>
         ))}
       </div>
