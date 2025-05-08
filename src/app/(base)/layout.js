@@ -1,6 +1,6 @@
 import Navbar from "@/features/homepage/components/navbar";
 import Footer from "@/features/homepage/components/footer";
-import { Announcement } from "@/features/homepage/components/announcement";
+// import { Announcement } from "@/features/homepage/components/announcement";
 
 export const metadata = {
   title: "Devon",
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
 
       <Footer />
 
-      <Announcement />
+      {/*<Announcement />*/}
     </main>
   );
 }
