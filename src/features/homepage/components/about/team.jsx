@@ -5,19 +5,21 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-import { XIcon } from "@/components/icons/x-icon";
+// import { XIcon } from "@/components/icons/x-icon";
 import { LinkedInIcon } from "@/components/icons/linkedin-icon";
 import { SectionTag, SectionTitle } from "@/components/section-util-tags";
 
 import ceo from "/public/images/devon-ceo.png";
 import pm from "/public/images/devon-pm.png";
-import fe from "/public/images/devon-fe.png";
 import ai from "/public/images/devon-ai.png";
 import pd from "/public/images/devon-pd.png";
-import fin from "/public/images/devon-fin.png";
-import hr from "/public/images/devon-hr.png";
 import devonPatterns from "/public/svg/devon-d-digital-asset-outline.svg";
 import Link from "next/link";
+
+
+const fe = "https://drive.google.com/file/d/11vErzdDHjq0RO9Zia3JG4EFHHnf34YZ-/view";
+const fin = "https://drive.google.com/file/d/1GNuwMZ7mFafeizrAKqSb9JwZd3KRs-vf/view?usp=drive_link";
+const hr = "https://drive.google.com/file/d/1BaA8evTRv_a1wa7x3oL64JbVgMJdNJ7k/view?usp=drive_link"
 
 
 const Team = () => {
@@ -56,8 +58,8 @@ const Team = () => {
             <Image
               src={activeMember.imageUrl}
               alt={activeMember.name}
-              height={500}
-              width={400}
+              height={200}
+              width={100}
               className="object-cover object-top md:object-center size-full"
             />
           </div>
@@ -102,17 +104,19 @@ const teamMembers = [
     name: "Bemshima Peter",
     role: "C.E.O",
     socials: [
+      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
+      */
       {
         id: 2,
         name: "LinkedIn",
         icon: <LinkedInIcon />,
-        link: "",
+        link: "https://www.linkedin.com/in/bemshima-peter/",
       },
     ],
     imageUrl: ceo,
@@ -122,17 +126,19 @@ const teamMembers = [
     name: "Ireoluwa Omojola",
     role: "Product Manager",
     socials: [
+      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
+      */
       {
         id: 2,
         name: "LinkedIn",
         icon: <LinkedInIcon />,
-        link: "",
+        link: "https://www.linkedin.com/in/ireoluwa-omojola/",
       },
     ],
     imageUrl: pm,
@@ -142,17 +148,19 @@ const teamMembers = [
     name: "Godswill Nasara",
     role: "Frontend Engineer",
     socials: [
+      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
+      */
       {
         id: 2,
         name: "LinkedIn",
         icon: <LinkedInIcon />,
-        link: "",
+        link: "https://www.linkedin.com/in/godswill-nasara/",
       },
     ],
     imageUrl: fe,
@@ -162,17 +170,19 @@ const teamMembers = [
     name: "Israel Adegoke",
     role: "Artificial Intelligence Engineer",
     socials: [
+      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
+      */
       {
         id: 2,
         name: "LinkedIn",
         icon: <LinkedInIcon />,
-        link: "",
+        link: "https://www.linkedin.com/in/israeladegoke-aidol/",
       },
     ],
     imageUrl: ai,
@@ -182,17 +192,19 @@ const teamMembers = [
     name: "Benjamin Benjamin",
     role: "Product Designer",
     socials: [
+      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
+      */
       {
         id: 2,
         name: "LinkedIn",
         icon: <LinkedInIcon />,
-        link: "",
+        link: "https://www.linkedin.com/in/bendesignrr/",
       },
     ],
     imageUrl: pd,
@@ -202,17 +214,19 @@ const teamMembers = [
     name: "Meshach Auta Bulusson",
     role: "Finance Manager",
     socials: [
+      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
+      */
       {
         id: 2,
         name: "LinkedIn",
         icon: <LinkedInIcon />,
-        link: "",
+        link: "https://www.linkedin.com/in/meshach-bulusson-aca-737383242/",
       },
     ],
     imageUrl: fin,
@@ -222,17 +236,19 @@ const teamMembers = [
     name: "Vivian Daniel-Nwaorisara",
     role: "Human Resource Manager",
     socials: [
+      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
+      */
       {
         id: 2,
         name: "LinkedIn",
         icon: <LinkedInIcon />,
-        link: "",
+        link: "https://www.linkedin.com/in/vivian-daniel-7a07821bb/",
       },
     ],
     imageUrl: hr,
