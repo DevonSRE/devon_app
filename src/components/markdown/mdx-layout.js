@@ -15,7 +15,7 @@ export function MDXLayout({ children, className, mainClass }) {
         <PolicyTabs />
       </div>
 
-      <div className="bg-primaryBg p-4 pb-0 min-w-full">
+      <div className="p-4 pb-0 min-w-full">
         <Content className={className} mainClass={mainClass}>
           {children}
         </Content>
@@ -88,7 +88,7 @@ function Content({ children, className, mainClass }) {
 
   return (
     <div className="flex flex-col h-full w-full relative">
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-10">
         <aside
           className={cn(
             "md:w-64 flex-shrink-0 md:sticky top-20 self-start overflow-y-auto",

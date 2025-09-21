@@ -50,7 +50,7 @@ const components = {
   a: ({ className, ...props }) => (
     <a
       className={cn(
-        "text-white text-sm md:text-base font-medium underline underline-offset-4 text-primary",
+        "text-sm md:text-base font-medium underline underline-offset-4 !text-blue-600",
         className,
       )}
       {...props}
