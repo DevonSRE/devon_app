@@ -7,7 +7,7 @@ import facebook from "/public/svg/Facebook.svg";
 import instagram from "/public/svg/Instagram.svg";
 import x from "/public/svg/X.svg";
 import linkedin from "/public/svg/LinkedIn.svg";
-// import youtube from "/public/svg/Youtube.svg"
+import youtube from "/public/svg/Youtube.svg";
 import { LocateFixedIcon, MailIcon, PhoneCallIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -119,21 +119,33 @@ const socials = [
   {
     id: 1,
     name: "Facebook",
-    url: "https://www.facebook.com/share/1BPLqp3CbU/?mibextid=wwXIfr",
+    url: "https://www.facebook.com/profile.php?id=61571581541306",
     icon: facebook,
   },
   {
     id: 2,
     name: "Instagram",
-    url: "https://www.instagram.com/devon_technologies_ltd?igsh=MXQxczNsMXJ6b29iYQ==",
+    url: "https://www.instagram.com/devon_tech_?igsh=MXcyaTJ5ZHVubnY2dw==",
     icon: instagram,
   },
-  { id: 3, name: "X", url: "https://x.com/DevonTechio", icon: x },
+  {
+    id: 3,
+    name: "X",
+    url: "https://x.com/devontechio?s=21&t=MSYMhx7Evn6oXwhwVmOj6A",
+    icon: x,
+  },
   {
     id: 4,
     name: "LinkedIn",
-    url: "https://www.linkedin.com/company/devon-technologies-ltd/about/?viewAsMember=true",
+    url: "https://www.linkedin.com/company/devon-technologies-ltd/",
+
     icon: linkedin,
+  },
+  {
+    id: 5,
+    name: "YouTube",
+    url: "https://www.youtube.com/@DevonTechnologiesltd",
+    icon: youtube,
   },
 ];
 
