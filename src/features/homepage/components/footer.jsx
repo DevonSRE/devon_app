@@ -7,7 +7,7 @@ import facebook from "/public/svg/Facebook.svg";
 import instagram from "/public/svg/Instagram.svg";
 import x from "/public/svg/X.svg";
 import linkedin from "/public/svg/LinkedIn.svg";
-// import youtube from "/public/svg/Youtube.svg"
+import youtube from "/public/svg/Youtube.svg";
 import { LocateFixedIcon, MailIcon, PhoneCallIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -134,6 +134,12 @@ const socials = [
     name: "LinkedIn",
     url: "https://www.linkedin.com/company/devon-technologies-ltd/about/?viewAsMember=true",
     icon: linkedin,
+  },
+  {
+    id: 5,
+    name: "YouTube",
+    url: "https://www.youtube.com/@DevonTechnologiesltd",
+    icon: youtube,
   },
 ];
 
