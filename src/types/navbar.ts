@@ -4,4 +4,5 @@ export type TNavbarItem = {
   category: string;
   value: string;
   url: string;
+  props?: React.ComponentProps<"a">;
 };

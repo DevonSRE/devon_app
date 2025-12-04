@@ -37,19 +37,20 @@ export default function Navbar() {
 
           <NavbarItems navItems={navbarItems} />
 
-          <div className="hidden lg:block">
-            {navbarItems.map((item) => (
-              <div key={item.id}>
-                {item.category === "cta" && (
+          <div className="hidden lg:flex items-center gap-2">
+            {navbarItems
+              .filter((f) => f.category === "cta")
+              .map((item) => (
+                <div key={item.id} className="w-fit">
                   <Link
-                    href="/contact-us"
+                    href={item.url}
                     className={cn(buttonVariants({ size: "lg" }))}
+                    {...item.props}
                   >
                     {item.value}
                   </Link>
-                )}
-              </div>
-            ))}
+                </div>
+              ))}
           </div>
         </div>
       </header>
@@ -88,6 +89,20 @@ const navbarItems: TNavbarItem[] = [
   },
   {
     id: 5,
+    name: "book-a-demo",
+    category: "cta",
+    value: "Book A Demo",
+    url: "https://calendly.com/devontech/demo-of-devon-technologeis-products",
+    props: {
+      target: "_blank",
+      className: cn(
+        buttonVariants({ size: "lg" }),
+        "bg-green-500 hover:bg-green-600",
+      ),
+    },
+  },
+  {
+    id: 6,
     name: "contact-us",
     category: "cta",
     value: "Contact Us",
