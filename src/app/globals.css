@@ -43,6 +43,8 @@
   --color-devon-judic: var(--devon-judic-bg);
   --color-devon-docketmaster: var(--devon-docketmaster-bg);
   --color-devon-lawkonnect: var(--devon-lawkonnect-bg);
+  --color-devon-meetsession: var(--devon-meetsession-bg);
+  --color-devon-budeshi: var(--devon-budeshi-bg);
   --color-devon-purple: var(--devon-purple);
   --color-devon-indigo: var(--devon-indigo);
   --color-devon-green: var(--devon-green);
@@ -94,6 +96,9 @@
   --devon-purple: rgb(101, 88, 165);
   --devon-indigo: rgb(41, 45, 107);
   --devon-green: hsl(151, 39, 42%);
+
+  --devon-meetsession-bg: hsla(197, 100%, 6%, 1);
+  --devon-budeshi-bg: hsla(227, 62%, 35%, 1);
 }
 
 .dark {
