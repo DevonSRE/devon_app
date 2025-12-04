@@ -97,7 +97,7 @@ const navbarItems: TNavbarItem[] = [
       target: "_blank",
       className: cn(
         buttonVariants({ size: "lg" }),
-        "bg-green-500 hover:bg-green-600",
+        "bg-green-600 hover:bg-green-700",
       ),
     },
   },
