@@ -48,6 +48,7 @@
   --color-devon-purple: var(--devon-purple);
   --color-devon-indigo: var(--devon-indigo);
   --color-devon-green: var(--devon-green);
+  --color-devon-pale-blue: var(--devon-pale-blue);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -96,9 +97,9 @@
   --devon-purple: rgb(101, 88, 165);
   --devon-indigo: rgb(41, 45, 107);
   --devon-green: hsl(151, 39, 42%);
-
   --devon-meetsession-bg: hsla(197, 100%, 6%, 1);
   --devon-budeshi-bg: hsla(227, 62%, 35%, 1);
+  --devon-pale-blue: hsla(227, 62%, 35%, 1);
 }
 
 .dark {
