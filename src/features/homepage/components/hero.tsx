@@ -1,12 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { SectionTitle } from "@/components/section-util-tags";
 import { cn } from "@/lib/utils";
+import { CountdownV2 } from "@/components/countdown-v2";
+import { useState } from "react";
 
 const Hero = () => {
+  const [isNewYear, setIsNewYear] = useState(false);
+  const targetDate = new Date("2025-12-31T23:59:59");
   return (
     <div className="bg-[url('/svg/devon-bg-eclipse.svg')] lg:bg-[url('/svg/devon-hero-bg.svg')] bg-neutral-950 bg-cover md:bg-contain bg-left md:bg-right bg-no-repeat w-full relative">
+      {isNewYear ? (
+        <NewYearCard />
+      ) : (
+        <CountdownV2
+          targetDate={targetDate}
+          onComplete={() => {
+            setIsNewYear(true);
+          }}
+        />
+      )}
       <div className="max-w-screen-sm sm:max-w-screen-md md:max-w-screen-xl xl:max-w-screen-2xl mx-auto min-h-[calc(100dvh-70px)] w-full text-white flex flex-col md:flex-row justify-center md:justify-start items-center">
         {/* Content Container */}
         <div className="w-full min-h-full md:relative -translate-y-24 md:-translate-y-16 lg:-translate-y-0">
@@ -66,3 +82,11 @@ const Hero = () => {
 };
 
 export default Hero;
+
+const NewYearCard = () => {
+  return (
+    <div className="absolute top-0 left-1/2 -translate-x-1/2">
+      <p className="text-3xl text-green-500">Happy New Year 🎉</p>
+    </div>
+  );
+};
