@@ -9,8 +9,10 @@ import Link from "next/link";
 import { LinkedInIcon } from "@/components/icons/custom-icons";
 import { DriveImage } from "@/components/drive-image";
 
+/*
 const fin =
   "https://drive.google.com/file/d/1GNuwMZ7mFafeizrAKqSb9JwZd3KRs-vf/view";
+*/
 const hr =
   "https://drive.google.com/file/d/1BaA8evTRv_a1wa7x3oL64JbVgMJdNJ7k/view";
 
@@ -258,19 +260,18 @@ const teamMembers = [
     imageUrl:
       "https://drive.google.com/file/d/1KR9xtC31b9d96TLF8ENdWXkmBYGXMJMt/view",
   },
+  /*
   {
     id: 8,
     name: "Meshach Auta Bulusson",
     role: "Finance Manager",
     socials: [
-      /*
       {
         id: 1,
         name: "X",
         icon: <XIcon />,
         link: "",
       },
-      */
       {
         id: 2,
         name: "LinkedIn",
@@ -280,6 +281,7 @@ const teamMembers = [
     ],
     imageUrl: fin,
   },
+  */
   {
     id: 9,
     name: "Vivian Daniel-Nwaorisara",
