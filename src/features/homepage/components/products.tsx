@@ -129,24 +129,24 @@ const projects = [
     textColor: "text-white",
     urlId: "03",
   },
-  {
-    id: 5,
-    title: "Budeshi",
-    img: (
-      <div className="absolute -bottom-5 md:-bottom-8 lg:-bottom-1 xl:-bottom-2 -right-12 md:right-0 w-80 md:w-full h-full">
-        <Image
-          src={"/svg/devon-budeshi-banner.png"}
-          alt="meetsession"
-          height={500}
-          width={500}
-          className="absolute -bottom-3 -right-11 w-fit h-full aspect-video object-contain object-center"
-        />
-      </div>
-    ),
-    bgColor: "bg-linear-to-r/oklab from-devon-pale-blue to-purple-700 to-80%",
-    textColor: "text-white",
-    urlId: "04",
-  },
+  // {
+  //   id: 5,
+  //   title: "Budeshi",
+  //   img: (
+  //     <div className="absolute -bottom-5 md:-bottom-8 lg:-bottom-1 xl:-bottom-2 -right-12 md:right-0 w-80 md:w-full h-full">
+  //       <Image
+  //         src={"/svg/devon-budeshi-banner.png"}
+  //         alt="meetsession"
+  //         height={500}
+  //         width={500}
+  //         className="absolute -bottom-3 -right-11 w-fit h-full aspect-video object-contain object-center"
+  //       />
+  //     </div>
+  //   ),
+  //   bgColor: "bg-linear-to-r/oklab from-devon-pale-blue to-purple-700 to-80%",
+  //   textColor: "text-white",
+  //   urlId: "04",
+  // },
 ];
 
 export default Projects;
