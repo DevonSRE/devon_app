@@ -147,16 +147,16 @@ const products: TSolutionsProducts[] = [
     link: "https://meetsession.devontech.io/",
     bgColor: "bg-devon-meetsession",
   },
-  {
-    id: "04",
-    name: "Budeshi",
-    logo: "",
-    banner: "/svg/devon-budeshi-banner.png",
-    description:
-      "Budeshi is an open contracting and public procurement transparency platform designed to link budget data, procurement records, and service delivery outcomes in one unified digital environment. The platform helps governments, civil society organizations, and citizens monitor how public funds are spent and how efficiently projects are executed. ",
-    link: "https://grants.budeshi.ng/",
-    bgColor: "bg-devon-budeshi",
-  },
+  // {
+  //   id: "04",
+  //   name: "Budeshi",
+  //   logo: "",
+  //   banner: "/svg/devon-budeshi-banner.png",
+  //   description:
+  //     "Budeshi is an open contracting and public procurement transparency platform designed to link budget data, procurement records, and service delivery outcomes in one unified digital environment. The platform helps governments, civil society organizations, and citizens monitor how public funds are spent and how efficiently projects are executed. ",
+  //   link: "https://grants.budeshi.ng/",
+  //   bgColor: "bg-devon-budeshi",
+  // },
 ];
 
 export { Products };
