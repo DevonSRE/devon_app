@@ -38,11 +38,11 @@ const Team = () => {
         />
 
         <div className="col-start-1 md:col-start-2 col-span-full">
-          <SectionTag color="green" text="Meet The Team" />
+          <SectionTag color="green" text="Meet The CEO" />
         </div>
 
         <div className="col-span-full md:col-span-4 col-start-1 md:col-start-2">
-          <SectionTitle className="text-2xl md:text-4xl">The Team</SectionTitle>
+          <SectionTitle className="text-2xl md:text-4xl">The CEO</SectionTitle>
         </div>
 
         <div className="col-start-1 md:col-start-2 col-end-2 md:col-end-12 grid grid-cols-1 md:grid-cols-9 gap-10 md:gap-20 h-[460px] w-full">

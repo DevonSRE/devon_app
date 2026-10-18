@@ -111,9 +111,9 @@ const exploreItems = {
     },
     {
       icon: <GemIcon size={16} />,
-      title: "Our Team",
+      title: "Our CEO",
       href: "/about",
-      description: "Meet the experts behind our solutions.",
+      description: "Meet the leader behind our solutions.",
     },
     {
       icon: <GemIcon size={16} />,
