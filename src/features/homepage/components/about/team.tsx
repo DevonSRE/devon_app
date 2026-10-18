@@ -9,19 +9,10 @@ import Link from "next/link";
 import { LinkedInIcon } from "@/components/icons/custom-icons";
 import { DriveImage } from "@/components/drive-image";
 
-<<<<<<< HEAD
-/*
-const fin =
-  "https://drive.google.com/file/d/1GNuwMZ7mFafeizrAKqSb9JwZd3KRs-vf/view";
-*/
-const hr =
-  "https://drive.google.com/file/d/1BaA8evTRv_a1wa7x3oL64JbVgMJdNJ7k/view";
-=======
 // const fin =
 //   "https://drive.google.com/file/d/1GNuwMZ7mFafeizrAKqSb9JwZd3KRs-vf/view";
 // const hr =
 //   "https://drive.google.com/file/d/1BaA8evTRv_a1wa7x3oL64JbVgMJdNJ7k/view";
->>>>>>> fddd931 (Fix: removed the team section)
 
 const Team = () => {
   const [activeMember, setActiveMember] = useState(teamMembers[0]);
@@ -130,189 +121,6 @@ const teamMembers = [
     imageUrl:
       "https://drive.google.com/file/d/1HVfQfxb22FupVFAV4soa6cV65LmHQqe8/view",
   },
-<<<<<<< HEAD
-  {
-    id: 2,
-    name: "Ireoluwa Omojola",
-    role: "Product Manager",
-    socials: [
-      /*
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      */
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/ireoluwa-omojola/",
-      },
-    ],
-    imageUrl: "/images/profile/devon-pm.png",
-  },
-  {
-    id: 3,
-    name: "Rukayat Tayo Abdulganiyu",
-    role: "Product Manager Assistant",
-    socials: [
-      /*
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      */
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/rukayat-abdulganiyu",
-      },
-    ],
-    imageUrl:
-      "https://drive.google.com/file/d/1932XGBgHLvP64yp6BXxwyRVUcNk880Pg/view",
-  },
-  {
-    id: 4,
-    name: "Godswill Nasara",
-    role: "Frontend Engineer",
-    socials: [
-      /*
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      */
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/godswill-nasara/",
-      },
-    ],
-    imageUrl:
-      "https://drive.google.com/file/d/1v9WhXkHngHGoXfb-Jq092hCHAwnviffm/view",
-  },
-  {
-    id: 5,
-    name: "Israel Adegoke",
-    role: "Artificial Intelligence Engineer",
-    socials: [
-      /*
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      */
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/israeladegoke-aidol/",
-      },
-    ],
-    imageUrl:
-      "https://drive.google.com/file/d/1EhggeRQIRvgh07U-3-UZnPp-b080y34n/view",
-  },
-  {
-    id: 6,
-    name: "Adejoh Godwin",
-    role: "Software Engineer",
-    socials: [
-      /*
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      */
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/godwin-adejoh/",
-      },
-    ],
-    imageUrl:
-      "https://drive.google.com/file/d/1RV5LGAAxbHRtBNL8hP8DCtkZlQc2j93q/view",
-  },
-  {
-    id: 7,
-    name: "Benjamin Benjamin",
-    role: "Product Designer",
-    socials: [
-      /*
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      */
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/bendesignrr/",
-      },
-    ],
-    imageUrl:
-      "https://drive.google.com/file/d/1KR9xtC31b9d96TLF8ENdWXkmBYGXMJMt/view",
-  },
-  /*
-  {
-    id: 8,
-    name: "Meshach Auta Bulusson",
-    role: "Finance Manager",
-    socials: [
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/meshach-bulusson-aca-737383242/",
-      },
-    ],
-    imageUrl: fin,
-  },
-  */
-  {
-    id: 9,
-    name: "Vivian Daniel-Nwaorisara",
-    role: "Human Resource Manager",
-    socials: [
-      /*
-      {
-        id: 1,
-        name: "X",
-        icon: <XIcon />,
-        link: "",
-      },
-      */
-      {
-        id: 2,
-        name: "LinkedIn",
-        icon: <LinkedInIcon />,
-        link: "https://www.linkedin.com/in/vivian-daniel-7a07821bb/",
-      },
-    ],
-    imageUrl: hr,
-  },
-=======
 //   {
 //     id: 2,
 //     name: "Ireoluwa Omojola",
@@ -494,7 +302,6 @@ const teamMembers = [
 //     ],
 //     imageUrl: hr,
 //   },
->>>>>>> fddd931 (Fix: removed the team section)
 ];
 
 export { Team };
